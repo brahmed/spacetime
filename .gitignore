@@ -1,0 +1,49 @@
+# Flutter / Dart build artifacts
+**/build/
+**/.dart_tool/
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/.metadata
+**/doc/api/
+**/coverage/
+
+# pubspec.lock — commit for apps, ignore for packages
+packages/*/pubspec.lock
+
+# Generated files — commit .g.dart so repo works without build_runner in CI
+# Remove this line if you add a build_runner step to CI
+**/*.freezed.dart
+
+# Environment variables — never commit
+**/.env.json
+**/.env
+**/.env.local
+
+# Firebase — never commit
+**/google-services.json
+**/GoogleService-Info.plist
+**/firebase_options.dart
+
+# Supabase
+supabase/.temp/
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# IDE
+**/.idea/
+**/.vscode/
+*.iml
+
+# Claude Code local settings — not project config
+.claude/
+
+# Project memory — local only
+memory/
+
+# Local progress tracking
+PROGRESS.md
+
+# Toolkit — external, not part of this project
+agentic-coding-toolkit-main/
