@@ -1,48 +1,71 @@
-import 'package:go_router/go_router.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
+import 'package:core/core.dart';
+import 'dart:async';
 
-// Placeholder screens — will be replaced in Phase 3+
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+
+import '../../features/auth/bloc/auth_bloc.dart';
+import '../../features/auth/presentation/login_screen.dart';
+import '../../features/student/presentation/student_home_screen.dart';
+import '../../features/teacher/presentation/teacher_home_screen.dart';
 
 abstract final class AppRouter {
-  static final router = GoRouter(
-    initialLocation: '/login',
-    redirect: (context, state) {
-      final session = Supabase.instance.client.auth.currentSession;
-      final isLoggedIn = session != null;
-      final isLoginRoute = state.uri.path == '/login';
+  static GoRouter router(AuthBloc authBloc) => GoRouter(
+        initialLocation: '/login',
+        refreshListenable: _AuthBlocListenable(authBloc),
+        redirect: (context, state) {
+          final authState = authBloc.state;
+          final isLoginRoute = state.uri.path == '/login';
 
-      if (!isLoggedIn && !isLoginRoute) return '/login';
-      if (isLoggedIn && isLoginRoute) return '/home';
-      return null;
-    },
-    routes: [
-      GoRoute(
-        path: '/login',
-        builder: (_, _) => const _PlaceholderScreen(label: 'Login'),
-      ),
-      GoRoute(
-        path: '/home',
-        builder: (_, _) => const _PlaceholderScreen(label: 'Home'),
-      ),
-    ],
-  );
+          if (authState is AuthInitial || authState is AuthLoading) {
+            return null; // wait for auth to resolve
+          }
+
+          if (authState is AuthUnauthenticated || authState is AuthFailure) {
+            return isLoginRoute ? null : '/login';
+          }
+
+          if (authState is AuthAuthenticated) {
+            final role = authState.profile.role;
+            if (isLoginRoute) {
+              return switch (role) {
+                UserRole.student => '/student/home',
+                UserRole.teacher => '/teacher/home',
+                UserRole.admin   => '/login', // admin uses backoffice
+              };
+            }
+          }
+
+          return null;
+        },
+        routes: [
+          GoRoute(
+            path: '/login',
+            builder: (_, _) => const LoginScreen(),
+          ),
+          GoRoute(
+            path: '/student/home',
+            builder: (_, _) => const StudentHomeScreen(),
+          ),
+          GoRoute(
+            path: '/teacher/home',
+            builder: (_, _) => const TeacherHomeScreen(),
+          ),
+        ],
+      );
 }
 
-class _PlaceholderScreen extends StatelessWidget {
-  const _PlaceholderScreen({required this.label});
+/// Notifies go_router to re-evaluate the redirect when AuthBloc emits.
+class _AuthBlocListenable extends ChangeNotifier {
+  _AuthBlocListenable(AuthBloc bloc) {
+    _subscription = bloc.stream.listen((_) => notifyListeners());
+  }
 
-  final String label;
+  late final StreamSubscription<AuthState> _subscription;
 
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Text(
-          label,
-          style: Theme.of(context).textTheme.headlineMedium,
-        ),
-      ),
-    );
+  void dispose() {
+    _subscription.cancel();
+    super.dispose();
   }
 }
