@@ -1,0 +1,51 @@
+name: Analyze
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  analyze:
+    name: Flutter Analyze
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.32.0'
+          channel: stable
+          cache: true
+
+      - name: Install packages/core dependencies
+        run: cd packages/core && dart pub get
+
+      - name: Install packages/supabase dependencies
+        run: cd packages/supabase && dart pub get
+
+      - name: Install packages/ui dependencies
+        run: cd packages/ui && flutter pub get
+
+      - name: Install apps/mobile dependencies
+        run: cd apps/mobile && flutter pub get
+
+      - name: Install apps/backoffice dependencies
+        run: cd apps/backoffice && flutter pub get
+
+      - name: Analyze packages/core
+        run: cd packages/core && dart analyze lib/ --fatal-infos
+
+      - name: Analyze packages/supabase
+        run: cd packages/supabase && dart analyze lib/ --fatal-infos
+
+      - name: Analyze packages/ui
+        run: cd packages/ui && flutter analyze lib/ --fatal-infos
+
+      - name: Analyze apps/mobile
+        run: cd apps/mobile && flutter analyze lib/ --fatal-infos
+
+      - name: Analyze apps/backoffice
+        run: cd apps/backoffice && flutter analyze lib/ --fatal-infos
