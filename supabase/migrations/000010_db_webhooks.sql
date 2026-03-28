@@ -1,0 +1,25 @@
+-- ─── Database Webhooks ────────────────────────────────────────────────────────
+-- Webhooks are configured in the Supabase Dashboard under Database → Webhooks.
+-- This migration documents the required configuration.
+--
+-- Webhook 1: on-session-created
+--   Table:  public.sessions
+--   Events: INSERT
+--   URL:    {SUPABASE_EDGE_BASE_URL}/on-session-created
+--   Headers:
+--     Authorization: Bearer {SUPABASE_SERVICE_ROLE_KEY}
+--     Content-Type: application/json
+--
+-- Webhook 2: on-session-cancelled
+--   Table:  public.sessions
+--   Events: UPDATE
+--   URL:    {SUPABASE_EDGE_BASE_URL}/on-session-cancelled
+--   Headers:
+--     Authorization: Bearer {SUPABASE_SERVICE_ROLE_KEY}
+--     Content-Type: application/json
+--
+-- Note: The on-session-cancelled function filters internally for
+--       status transitions to 'cancelled' only.
+--
+-- No SQL changes are made by this migration.
+select 1;
