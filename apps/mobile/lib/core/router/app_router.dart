@@ -6,7 +6,12 @@ import 'package:go_router/go_router.dart';
 
 import '../../features/auth/bloc/auth_bloc.dart';
 import '../../features/auth/presentation/login_screen.dart';
+import '../../features/notifications/presentation/notifications_screen.dart';
+import '../../features/profile/presentation/profile_screen.dart';
+import '../../features/student/presentation/schedule_screen.dart';
+import '../../features/student/presentation/session_detail_screen.dart';
 import '../../features/student/presentation/student_home_screen.dart';
+import '../../features/student/presentation/student_shell.dart';
 import '../../features/teacher/presentation/teacher_home_screen.dart';
 
 abstract final class AppRouter {
@@ -43,10 +48,56 @@ abstract final class AppRouter {
             path: '/login',
             builder: (_, _) => const LoginScreen(),
           ),
-          GoRoute(
-            path: '/student/home',
-            builder: (_, _) => const StudentHomeScreen(),
+
+          // Student tab shell
+          StatefulShellRoute.indexedStack(
+            builder: (_, _, navigationShell) =>
+                StudentShell(navigationShell: navigationShell),
+            branches: [
+              StatefulShellBranch(
+                routes: [
+                  GoRoute(
+                    path: '/student/home',
+                    builder: (_, _) => const StudentHomeScreen(),
+                  ),
+                ],
+              ),
+              StatefulShellBranch(
+                routes: [
+                  GoRoute(
+                    path: '/student/schedule',
+                    builder: (_, _) => const ScheduleScreen(),
+                    routes: [
+                      GoRoute(
+                        path: ':sessionId',
+                        builder: (_, state) => SessionDetailScreen(
+                          sessionId: state.pathParameters['sessionId']!,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              StatefulShellBranch(
+                routes: [
+                  GoRoute(
+                    path: '/student/notifications',
+                    builder: (_, _) => const NotificationsScreen(),
+                  ),
+                ],
+              ),
+              StatefulShellBranch(
+                routes: [
+                  GoRoute(
+                    path: '/student/profile',
+                    builder: (_, _) => const ProfileScreen(),
+                  ),
+                ],
+              ),
+            ],
           ),
+
+          // Teacher routes
           GoRoute(
             path: '/teacher/home',
             builder: (_, _) => const TeacherHomeScreen(),

@@ -70,5 +70,103 @@
   "@somethingWentWrong": { "description": "Generic error message" },
 
   "accessDenied": "Access denied. Admin accounts only.",
-  "@accessDenied": { "description": "Error shown when non-admin tries to log into backoffice" }
+  "@accessDenied": { "description": "Error shown when non-admin tries to log into backoffice" },
+
+  "navHome": "Home",
+  "@navHome": { "description": "Bottom nav: home tab" },
+
+  "navSchedule": "Schedule",
+  "@navSchedule": { "description": "Bottom nav: schedule tab" },
+
+  "navNotifications": "Notifications",
+  "@navNotifications": { "description": "Bottom nav: notifications tab" },
+
+  "navProfile": "Profile",
+  "@navProfile": { "description": "Bottom nav: profile tab" },
+
+  "nextSession": "Next session",
+  "@nextSession": { "description": "Section header on home screen" },
+
+  "noUpcomingSessions": "No upcoming sessions",
+  "@noUpcomingSessions": { "description": "Empty state when student has no scheduled sessions" },
+
+  "announcements": "Announcements",
+  "@announcements": { "description": "Section header on home screen" },
+
+  "noAnnouncements": "No announcements yet",
+  "@noAnnouncements": { "description": "Empty state for announcements" },
+
+  "schedule": "Schedule",
+  "@schedule": { "description": "Schedule screen title" },
+
+  "noSchedule": "Your schedule is empty",
+  "@noSchedule": { "description": "Empty state for student schedule" },
+
+  "sessionDetail": "Session detail",
+  "@sessionDetail": { "description": "Session detail screen title" },
+
+  "confirmAttendance": "Confirm attendance",
+  "@confirmAttendance": { "description": "Button to confirm attendance" },
+
+  "cancelAttendance": "Cancel attendance",
+  "@cancelAttendance": { "description": "Button to cancel attendance" },
+
+  "attendanceConfirmed": "Attendance confirmed",
+  "@attendanceConfirmed": { "description": "Success message after confirming" },
+
+  "attendanceCancelled": "Attendance cancelled",
+  "@attendanceCancelled": { "description": "Success message after cancelling" },
+
+  "sessionCancelled": "This session has been cancelled",
+  "@sessionCancelled": { "description": "Banner shown when session status is cancelled" },
+
+  "notifications": "Notifications",
+  "@notifications": { "description": "Notifications screen title" },
+
+  "noNotifications": "No notifications",
+  "@noNotifications": { "description": "Empty state for notifications list" },
+
+  "markAllRead": "Mark all as read",
+  "@markAllRead": { "description": "Button to mark all notifications as read" },
+
+  "profile": "Profile",
+  "@profile": { "description": "Profile screen title" },
+
+  "loading": "Loading…",
+  "@loading": { "description": "Generic loading message" },
+
+  "retry": "Retry",
+  "@retry": { "description": "Retry button label" },
+
+  "weekOf": "Week of {date}",
+  "@weekOf": {
+    "description": "Section header grouping sessions by week",
+    "placeholders": {
+      "date": { "type": "String" }
+    }
+  },
+
+  "sessionTime": "{startTime} – {endTime}",
+  "@sessionTime": {
+    "description": "Session time range display",
+    "placeholders": {
+      "startTime": { "type": "String" },
+      "endTime": { "type": "String" }
+    }
+  },
+
+  "rememberMe": "Remember me",
+  "@rememberMe": { "description": "Remember me checkbox label on login screen" },
+
+  "language": "Language",
+  "@language": { "description": "Language setting label on profile screen" },
+
+  "languageEnglish": "English",
+  "@languageEnglish": { "description": "English language option" },
+
+  "languageFrench": "French",
+  "@languageFrench": { "description": "French language option" },
+
+  "languageArabic": "Arabic",
+  "@languageArabic": { "description": "Arabic language option" }
 }

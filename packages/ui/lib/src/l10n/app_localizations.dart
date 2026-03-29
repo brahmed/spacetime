@@ -231,6 +231,180 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Access denied. Admin accounts only.'**
   String get accessDenied;
+
+  /// Bottom nav: home tab
+  ///
+  /// In en, this message translates to:
+  /// **'Home'**
+  String get navHome;
+
+  /// Bottom nav: schedule tab
+  ///
+  /// In en, this message translates to:
+  /// **'Schedule'**
+  String get navSchedule;
+
+  /// Bottom nav: notifications tab
+  ///
+  /// In en, this message translates to:
+  /// **'Notifications'**
+  String get navNotifications;
+
+  /// Bottom nav: profile tab
+  ///
+  /// In en, this message translates to:
+  /// **'Profile'**
+  String get navProfile;
+
+  /// Section header on home screen
+  ///
+  /// In en, this message translates to:
+  /// **'Next session'**
+  String get nextSession;
+
+  /// Empty state when student has no scheduled sessions
+  ///
+  /// In en, this message translates to:
+  /// **'No upcoming sessions'**
+  String get noUpcomingSessions;
+
+  /// Section header on home screen
+  ///
+  /// In en, this message translates to:
+  /// **'Announcements'**
+  String get announcements;
+
+  /// Empty state for announcements
+  ///
+  /// In en, this message translates to:
+  /// **'No announcements yet'**
+  String get noAnnouncements;
+
+  /// Schedule screen title
+  ///
+  /// In en, this message translates to:
+  /// **'Schedule'**
+  String get schedule;
+
+  /// Empty state for student schedule
+  ///
+  /// In en, this message translates to:
+  /// **'Your schedule is empty'**
+  String get noSchedule;
+
+  /// Session detail screen title
+  ///
+  /// In en, this message translates to:
+  /// **'Session detail'**
+  String get sessionDetail;
+
+  /// Button to confirm attendance
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm attendance'**
+  String get confirmAttendance;
+
+  /// Button to cancel attendance
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel attendance'**
+  String get cancelAttendance;
+
+  /// Success message after confirming
+  ///
+  /// In en, this message translates to:
+  /// **'Attendance confirmed'**
+  String get attendanceConfirmed;
+
+  /// Success message after cancelling
+  ///
+  /// In en, this message translates to:
+  /// **'Attendance cancelled'**
+  String get attendanceCancelled;
+
+  /// Banner shown when session status is cancelled
+  ///
+  /// In en, this message translates to:
+  /// **'This session has been cancelled'**
+  String get sessionCancelled;
+
+  /// Notifications screen title
+  ///
+  /// In en, this message translates to:
+  /// **'Notifications'**
+  String get notifications;
+
+  /// Empty state for notifications list
+  ///
+  /// In en, this message translates to:
+  /// **'No notifications'**
+  String get noNotifications;
+
+  /// Button to mark all notifications as read
+  ///
+  /// In en, this message translates to:
+  /// **'Mark all as read'**
+  String get markAllRead;
+
+  /// Profile screen title
+  ///
+  /// In en, this message translates to:
+  /// **'Profile'**
+  String get profile;
+
+  /// Generic loading message
+  ///
+  /// In en, this message translates to:
+  /// **'Loading…'**
+  String get loading;
+
+  /// Retry button label
+  ///
+  /// In en, this message translates to:
+  /// **'Retry'**
+  String get retry;
+
+  /// Section header grouping sessions by week
+  ///
+  /// In en, this message translates to:
+  /// **'Week of {date}'**
+  String weekOf(String date);
+
+  /// Session time range display
+  ///
+  /// In en, this message translates to:
+  /// **'{startTime} – {endTime}'**
+  String sessionTime(String startTime, String endTime);
+
+  /// Remember me checkbox label on login screen
+  ///
+  /// In en, this message translates to:
+  /// **'Remember me'**
+  String get rememberMe;
+
+  /// Language setting label on profile screen
+  ///
+  /// In en, this message translates to:
+  /// **'Language'**
+  String get language;
+
+  /// English language option
+  ///
+  /// In en, this message translates to:
+  /// **'English'**
+  String get languageEnglish;
+
+  /// French language option
+  ///
+  /// In en, this message translates to:
+  /// **'French'**
+  String get languageFrench;
+
+  /// Arabic language option
+  ///
+  /// In en, this message translates to:
+  /// **'Arabic'**
+  String get languageArabic;
 }
 
 class _AppLocalizationsDelegate

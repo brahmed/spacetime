@@ -77,4 +77,95 @@ class AppLocalizationsFr extends AppLocalizations {
   @override
   String get accessDenied =>
       'Accès refusé. Comptes administrateurs uniquement.';
+
+  @override
+  String get navHome => 'Accueil';
+
+  @override
+  String get navSchedule => 'Planning';
+
+  @override
+  String get navNotifications => 'Notifications';
+
+  @override
+  String get navProfile => 'Profil';
+
+  @override
+  String get nextSession => 'Prochaine séance';
+
+  @override
+  String get noUpcomingSessions => 'Aucune séance à venir';
+
+  @override
+  String get announcements => 'Annonces';
+
+  @override
+  String get noAnnouncements => 'Aucune annonce pour le moment';
+
+  @override
+  String get schedule => 'Planning';
+
+  @override
+  String get noSchedule => 'Votre planning est vide';
+
+  @override
+  String get sessionDetail => 'Détail de la séance';
+
+  @override
+  String get confirmAttendance => 'Confirmer ma présence';
+
+  @override
+  String get cancelAttendance => 'Annuler ma présence';
+
+  @override
+  String get attendanceConfirmed => 'Présence confirmée';
+
+  @override
+  String get attendanceCancelled => 'Présence annulée';
+
+  @override
+  String get sessionCancelled => 'Cette séance a été annulée';
+
+  @override
+  String get notifications => 'Notifications';
+
+  @override
+  String get noNotifications => 'Aucune notification';
+
+  @override
+  String get markAllRead => 'Tout marquer comme lu';
+
+  @override
+  String get profile => 'Profil';
+
+  @override
+  String get loading => 'Chargement…';
+
+  @override
+  String get retry => 'Réessayer';
+
+  @override
+  String weekOf(String date) {
+    return 'Semaine du $date';
+  }
+
+  @override
+  String sessionTime(String startTime, String endTime) {
+    return '$startTime – $endTime';
+  }
+
+  @override
+  String get rememberMe => 'Se souvenir de moi';
+
+  @override
+  String get language => 'Langue';
+
+  @override
+  String get languageEnglish => 'Anglais';
+
+  @override
+  String get languageFrench => 'Français';
+
+  @override
+  String get languageArabic => 'Arabe';
 }

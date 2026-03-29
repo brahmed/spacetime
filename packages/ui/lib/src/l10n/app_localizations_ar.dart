@@ -75,4 +75,95 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get accessDenied => 'الوصول مرفوض. حسابات المشرفين فقط.';
+
+  @override
+  String get navHome => 'الرئيسية';
+
+  @override
+  String get navSchedule => 'الجدول';
+
+  @override
+  String get navNotifications => 'الإشعارات';
+
+  @override
+  String get navProfile => 'الملف الشخصي';
+
+  @override
+  String get nextSession => 'الحصة القادمة';
+
+  @override
+  String get noUpcomingSessions => 'لا توجد حصص قادمة';
+
+  @override
+  String get announcements => 'الإعلانات';
+
+  @override
+  String get noAnnouncements => 'لا توجد إعلانات بعد';
+
+  @override
+  String get schedule => 'الجدول الدراسي';
+
+  @override
+  String get noSchedule => 'جدولك الدراسي فارغ';
+
+  @override
+  String get sessionDetail => 'تفاصيل الحصة';
+
+  @override
+  String get confirmAttendance => 'تأكيد الحضور';
+
+  @override
+  String get cancelAttendance => 'إلغاء الحضور';
+
+  @override
+  String get attendanceConfirmed => 'تم تأكيد الحضور';
+
+  @override
+  String get attendanceCancelled => 'تم إلغاء الحضور';
+
+  @override
+  String get sessionCancelled => 'تم إلغاء هذه الحصة';
+
+  @override
+  String get notifications => 'الإشعارات';
+
+  @override
+  String get noNotifications => 'لا توجد إشعارات';
+
+  @override
+  String get markAllRead => 'تحديد الكل كمقروء';
+
+  @override
+  String get profile => 'الملف الشخصي';
+
+  @override
+  String get loading => 'جارٍ التحميل…';
+
+  @override
+  String get retry => 'إعادة المحاولة';
+
+  @override
+  String weekOf(String date) {
+    return 'أسبوع $date';
+  }
+
+  @override
+  String sessionTime(String startTime, String endTime) {
+    return '$startTime – $endTime';
+  }
+
+  @override
+  String get rememberMe => 'تذكّرني';
+
+  @override
+  String get language => 'اللغة';
+
+  @override
+  String get languageEnglish => 'الإنجليزية';
+
+  @override
+  String get languageFrench => 'الفرنسية';
+
+  @override
+  String get languageArabic => 'العربية';
 }
