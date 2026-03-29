@@ -4,6 +4,7 @@ import 'package:supabase_client/supabase.dart';
 import 'package:supabase_flutter/supabase_flutter.dart' hide Session;
 import 'package:ui/ui.dart';
 
+import 'core/cubit/locale_cubit.dart';
 import 'core/router/app_router.dart';
 import 'features/auth/bloc/auth_bloc.dart';
 
@@ -24,10 +25,15 @@ class SpaceTimeBackofficeApp extends StatelessWidget {
         RepositoryProvider(create: (_) => AnnouncementRepository(client)),
         RepositoryProvider(create: (_) => AttendanceRepository(client)),
       ],
-      child: BlocProvider(
-        create: (context) => AuthBloc(
-          context.read<AuthRepository>(),
-        )..add(const AuthStarted()),
+      child: MultiBlocProvider(
+        providers: [
+          BlocProvider(
+            create: (context) => AuthBloc(
+              context.read<AuthRepository>(),
+            )..add(const AuthStarted()),
+          ),
+          BlocProvider(create: (_) => LocaleCubit()),
+        ],
         child: const _AppView(),
       ),
     );
@@ -46,13 +52,18 @@ class _AppViewState extends State<_AppView> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      onGenerateTitle: (context) => context.l10n.appNameBackoffice,
-      debugShowCheckedModeBanner: false,
-      theme: AppTheme.dark,
-      routerConfig: _router,
-      localizationsDelegates: AppLocalizations.localizationsDelegates,
-      supportedLocales: AppLocalizations.supportedLocales,
+    return BlocBuilder<LocaleCubit, Locale?>(
+      builder: (context, locale) {
+        return MaterialApp.router(
+          onGenerateTitle: (context) => context.l10n.appNameBackoffice,
+          debugShowCheckedModeBanner: false,
+          theme: AppTheme.dark,
+          routerConfig: _router,
+          locale: locale,
+          localizationsDelegates: AppLocalizations.localizationsDelegates,
+          supportedLocales: AppLocalizations.supportedLocales,
+        );
+      },
     );
   }
 }
