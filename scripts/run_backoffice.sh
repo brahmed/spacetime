@@ -14,6 +14,8 @@ if [ ! -f "$ENV_FILE" ]; then
   echo '  "SUPABASE_ANON_KEY": "<anon_key>",'
   echo '  "SUPABASE_EDGE_BASE_URL": "https://<project-ref>.supabase.co/functions/v1"'
   echo '}'
+  echo ""
+  echo "Note: the backoffice does not use Firebase — no Firebase keys required."
   exit 1
 fi
 
