@@ -55,9 +55,10 @@ class _LoginScreenState extends State<LoginScreen> {
     }
   }
 
-  void _submit() {
+  Future<void> _submit() async {
     if (!_formKey.currentState!.validate()) return;
-    _saveOrClearCredentials();
+    await _saveOrClearCredentials();
+    if (!mounted) return;
     context.read<AuthBloc>().add(
           AuthLoginRequested(
             email: _emailController.text.trim(),

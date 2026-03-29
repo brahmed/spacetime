@@ -436,6 +436,12 @@ abstract class AppLocalizations {
   /// **'{count, plural, =0{No students} =1{1 student} other{{count} students}}'**
   String attendees(int count);
 
+  /// Number of courses a student is enrolled in
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, =0{No courses} =1{1 course} other{{count} courses}}'**
+  String enrolledCoursesCount(int count);
+
   /// Button to cancel a session
   ///
   /// In en, this message translates to:
@@ -735,6 +741,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Assign course'**
   String get assignCourse;
+
+  /// Button to unassign a course from a teacher
+  ///
+  /// In en, this message translates to:
+  /// **'Unassign'**
+  String get unassignCourse;
+
+  /// Dialog title for unassign
+  ///
+  /// In en, this message translates to:
+  /// **'Unassign course?'**
+  String get unassignConfirmTitle;
+
+  /// Dialog body for unassign
+  ///
+  /// In en, this message translates to:
+  /// **'The course will no longer have an assigned teacher.'**
+  String get unassignConfirmMessage;
+
+  /// Confirm button in unassign dialog
+  ///
+  /// In en, this message translates to:
+  /// **'Yes, unassign'**
+  String get unassignConfirmButton;
 
   /// Button to send an announcement
   ///

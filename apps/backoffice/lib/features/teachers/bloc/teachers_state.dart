@@ -63,3 +63,17 @@ final class TeacherAssignFailure extends TeachersSuccess {
     required super.courses,
   });
 }
+
+final class TeacherUnassignSuccess extends TeachersSuccess {
+  const TeacherUnassignSuccess({
+    required super.teachers,
+    required super.courses,
+  });
+}
+
+final class TeacherUnassignFailure extends TeachersSuccess {
+  const TeacherUnassignFailure({
+    required super.teachers,
+    required super.courses,
+  });
+}

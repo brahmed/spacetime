@@ -200,7 +200,7 @@ class _StudentRow extends StatelessWidget {
               ?.copyWith(fontWeight: FontWeight.w600),
         ),
         subtitle: Text(
-          l10n.attendees(enrolledCourseIds.length),
+          l10n.enrolledCoursesCount(enrolledCourseIds.length),
           style: Theme.of(context)
               .textTheme
               .bodySmall

@@ -189,6 +189,13 @@
       "count": { "type": "int" }
     }
   },
+  "enrolledCoursesCount": "{count, plural, =0{No courses} =1{1 course} other{{count} courses}}",
+  "@enrolledCoursesCount": {
+    "description": "Number of courses a student is enrolled in",
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
 
   "cancelSession": "Cancel session",
   "@cancelSession": { "description": "Button to cancel a session" },
@@ -342,6 +349,14 @@
 
   "assignCourse": "Assign course",
   "@assignCourse": { "description": "Button to assign a course to a teacher" },
+  "unassignCourse": "Unassign",
+  "@unassignCourse": { "description": "Button to unassign a course from a teacher" },
+  "unassignConfirmTitle": "Unassign course?",
+  "@unassignConfirmTitle": { "description": "Dialog title for unassign" },
+  "unassignConfirmMessage": "The course will no longer have an assigned teacher.",
+  "@unassignConfirmMessage": { "description": "Dialog body for unassign" },
+  "unassignConfirmButton": "Yes, unassign",
+  "@unassignConfirmButton": { "description": "Confirm button in unassign dialog" },
 
   "sendAnnouncement": "Send announcement",
   "@sendAnnouncement": { "description": "Button to send an announcement" },

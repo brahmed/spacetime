@@ -33,6 +33,9 @@ dependencies:
   # Navigation
   go_router: ^14.6.2
 
+  # Secure local storage (used for remember-me on login)
+  flutter_secure_storage: ^9.2.2
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

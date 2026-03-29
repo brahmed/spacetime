@@ -46,39 +46,47 @@ abstract final class AppRouter {
             routes: [
               GoRoute(
                 path: '/dashboard',
-                builder: (_, _) => const DashboardScreen(),
+                pageBuilder: (_, _) => _fadePage(const DashboardScreen()),
               ),
               GoRoute(
                 path: '/courses',
-                builder: (_, _) => const CoursesScreen(),
+                pageBuilder: (_, _) => _fadePage(const CoursesScreen()),
               ),
               GoRoute(
                 path: '/sessions/:courseId',
-                builder: (_, state) => SessionsScreen(
+                pageBuilder: (_, state) => _fadePage(SessionsScreen(
                   courseId: state.pathParameters['courseId']!,
-                ),
+                )),
               ),
               GoRoute(
                 path: '/students',
-                builder: (_, _) => const StudentsScreen(),
+                pageBuilder: (_, _) => _fadePage(const StudentsScreen()),
               ),
               GoRoute(
                 path: '/teachers',
-                builder: (_, _) => const TeachersScreen(),
+                pageBuilder: (_, _) => _fadePage(const TeachersScreen()),
               ),
               GoRoute(
                 path: '/announcements',
-                builder: (_, _) => const AnnouncementsScreen(),
+                pageBuilder: (_, _) => _fadePage(const AnnouncementsScreen()),
               ),
               GoRoute(
                 path: '/settings',
-                builder: (_, _) => const SettingsScreen(),
+                pageBuilder: (_, _) => _fadePage(const SettingsScreen()),
               ),
             ],
           ),
         ],
       );
 }
+
+CustomTransitionPage<void> _fadePage(Widget child) =>
+    CustomTransitionPage<void>(
+      child: child,
+      transitionDuration: const Duration(milliseconds: 150),
+      transitionsBuilder: (_, animation, __, child) =>
+          FadeTransition(opacity: animation, child: child),
+    );
 
 class _AuthBlocListenable extends ChangeNotifier {
   _AuthBlocListenable(AuthBloc bloc) {

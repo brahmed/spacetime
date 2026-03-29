@@ -181,6 +181,31 @@ class SessionRepository {
     }
   }
 
+  Future<List<Session>> fetchTodaySessions() async {
+    try {
+      final now = DateTime.now();
+      final startOfDay =
+          DateTime(now.year, now.month, now.day).toUtc().toIso8601String();
+      final endOfDay = DateTime(now.year, now.month, now.day, 23, 59, 59)
+          .toUtc()
+          .toIso8601String();
+      final data = await _supabase
+          .from('sessions')
+          .select()
+          .gte('starts_at', startOfDay)
+          .lte('starts_at', endOfDay);
+      return data.map(Session.fromJson).toList();
+    } on PostgrestException catch (e, st) {
+      log(
+        'Failed to fetch today\'s sessions',
+        name: 'sessions',
+        error: e,
+        stackTrace: st,
+      );
+      throw NetworkException(e.message);
+    }
+  }
+
   /// Streams real-time attendance updates for a specific session.
   Stream<List<Map<String, dynamic>>> streamAttendanceForSession(
     String sessionId,
