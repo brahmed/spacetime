@@ -121,6 +121,35 @@ spacetime/
 
 ---
 
+## Phase 2.5 — Localisation
+
+**Goal:** Full i18n support in both apps — English, French, Arabic (RTL). No hardcoded strings anywhere in the UI.
+
+### Steps
+
+- 2.5.1 Add `flutter_localizations` + `intl` to `packages/ui` and both apps
+- 2.5.2 Write ARB files for `en`, `fr`, `ar` in `packages/ui/lib/l10n/`
+- 2.5.3 Configure `flutter gen-l10n` via `l10n.yaml` in `packages/ui`
+- 2.5.4 Export `AppLocalizations` and `L10nExtension` (`context.l10n`) from `packages/ui`
+- 2.5.5 Wire `localizationsDelegates` + `supportedLocales` into both `MaterialApp.router`s
+- 2.5.6 Replace all hardcoded UI strings with `context.l10n.*`
+
+### Conventions
+
+- All ARB files live in `packages/ui/lib/l10n/` — single source for both apps
+- Generated files go to `packages/ui/lib/src/l10n/` — never edit manually
+- Access via `context.l10n` extension — never `AppLocalizations.of(context)` directly
+- BLoC error strings stay in English (no BuildContext in BLoC) — map to l10n in UI listeners
+- Add new strings to all three ARB files simultaneously
+- RTL layout handled automatically by Flutter for `ar` locale
+
+### Deliverables
+- Both apps switch language/RTL automatically based on device locale
+- All visible strings translated in all 3 languages
+- `flutter analyze` clean
+
+---
+
 ## Phase 3 — Design System & Navigation Shell
 
 **Goal:** Full theme applied in both apps, routing skeleton working, Supabase auth initialized, blank authenticated screen per role.

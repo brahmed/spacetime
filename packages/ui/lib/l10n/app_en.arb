@@ -1,0 +1,405 @@
+{
+  "@@locale": "en",
+
+  "appName": "SpaceTime",
+  "@appName": { "description": "Application name" },
+
+  "appNameBackoffice": "SpaceTime — Back Office",
+  "@appNameBackoffice": { "description": "Back office application name" },
+
+  "backOfficeLabel": "Back Office",
+  "@backOfficeLabel": { "description": "Subtitle shown under logo on backoffice login" },
+
+  "signIn": "Sign in",
+  "@signIn": { "description": "Login button label" },
+
+  "signInToYourAccount": "Sign in to your account",
+  "@signInToYourAccount": { "description": "Login screen subtitle" },
+
+  "signOut": "Sign out",
+  "@signOut": { "description": "Logout button tooltip and label" },
+
+  "email": "Email",
+  "@email": { "description": "Email field label" },
+
+  "password": "Password",
+  "@password": { "description": "Password field label" },
+
+  "emailRequired": "Enter your email",
+  "@emailRequired": { "description": "Validation: email empty" },
+
+  "emailInvalid": "Enter a valid email",
+  "@emailInvalid": { "description": "Validation: email format invalid" },
+
+  "passwordRequired": "Enter your password",
+  "@passwordRequired": { "description": "Validation: password empty" },
+
+  "welcomeBack": "Welcome back,",
+  "@welcomeBack": { "description": "Greeting shown on home screens above the user name" },
+
+  "yourSchedule": "Your schedule",
+  "@yourSchedule": { "description": "Placeholder card label on student home screen" },
+
+  "todaysSessions": "Today's sessions",
+  "@todaysSessions": { "description": "Placeholder card label on teacher home screen" },
+
+  "dashboard": "Dashboard",
+  "@dashboard": { "description": "Dashboard screen title" },
+
+  "welcomeBackNamed": "Welcome back, {name}",
+  "@welcomeBackNamed": {
+    "description": "Dashboard greeting with user name",
+    "placeholders": {
+      "name": { "type": "String" }
+    }
+  },
+
+  "students": "Students",
+  "@students": { "description": "Stats card label" },
+
+  "teachers": "Teachers",
+  "@teachers": { "description": "Stats card label" },
+
+  "courses": "Courses",
+  "@courses": { "description": "Stats card label" },
+
+  "todaysSessionsCount": "Today's Sessions",
+  "@todaysSessionsCount": { "description": "Stats card label" },
+
+  "somethingWentWrong": "Something went wrong. Please try again.",
+  "@somethingWentWrong": { "description": "Generic error message" },
+
+  "accessDenied": "Access denied. Admin accounts only.",
+  "@accessDenied": { "description": "Error shown when non-admin tries to log into backoffice" },
+
+  "navHome": "Home",
+  "@navHome": { "description": "Bottom nav: home tab" },
+
+  "navSchedule": "Schedule",
+  "@navSchedule": { "description": "Bottom nav: schedule tab" },
+
+  "navNotifications": "Notifications",
+  "@navNotifications": { "description": "Bottom nav: notifications tab" },
+
+  "navProfile": "Profile",
+  "@navProfile": { "description": "Bottom nav: profile tab" },
+
+  "nextSession": "Next session",
+  "@nextSession": { "description": "Section header on home screen" },
+
+  "noUpcomingSessions": "No upcoming sessions",
+  "@noUpcomingSessions": { "description": "Empty state when student has no scheduled sessions" },
+
+  "announcements": "Announcements",
+  "@announcements": { "description": "Section header on home screen" },
+
+  "noAnnouncements": "No announcements yet",
+  "@noAnnouncements": { "description": "Empty state for announcements" },
+
+  "schedule": "Schedule",
+  "@schedule": { "description": "Schedule screen title" },
+
+  "noSchedule": "Your schedule is empty",
+  "@noSchedule": { "description": "Empty state for student schedule" },
+
+  "sessionDetail": "Session detail",
+  "@sessionDetail": { "description": "Session detail screen title" },
+
+  "confirmAttendance": "Confirm attendance",
+  "@confirmAttendance": { "description": "Button to confirm attendance" },
+
+  "cancelAttendance": "Cancel attendance",
+  "@cancelAttendance": { "description": "Button to cancel attendance" },
+
+  "attendanceConfirmed": "Attendance confirmed",
+  "@attendanceConfirmed": { "description": "Success message after confirming" },
+
+  "attendanceCancelled": "Attendance cancelled",
+  "@attendanceCancelled": { "description": "Success message after cancelling" },
+
+  "sessionCancelled": "This session has been cancelled",
+  "@sessionCancelled": { "description": "Banner shown when session status is cancelled" },
+
+  "notifications": "Notifications",
+  "@notifications": { "description": "Notifications screen title" },
+
+  "noNotifications": "No notifications",
+  "@noNotifications": { "description": "Empty state for notifications list" },
+
+  "markAllRead": "Mark all as read",
+  "@markAllRead": { "description": "Button to mark all notifications as read" },
+
+  "profile": "Profile",
+  "@profile": { "description": "Profile screen title" },
+
+  "loading": "Loading…",
+  "@loading": { "description": "Generic loading message" },
+
+  "retry": "Retry",
+  "@retry": { "description": "Retry button label" },
+
+  "weekOf": "Week of {date}",
+  "@weekOf": {
+    "description": "Section header grouping sessions by week",
+    "placeholders": {
+      "date": { "type": "String" }
+    }
+  },
+
+  "sessionTime": "{startTime} – {endTime}",
+  "@sessionTime": {
+    "description": "Session time range display",
+    "placeholders": {
+      "startTime": { "type": "String" },
+      "endTime": { "type": "String" }
+    }
+  },
+
+  "rememberMe": "Remember me",
+  "@rememberMe": { "description": "Remember me checkbox label on login screen" },
+
+  "language": "Language",
+  "@language": { "description": "Language setting label on profile screen" },
+
+  "languageEnglish": "English",
+  "@languageEnglish": { "description": "English language option" },
+
+  "languageFrench": "French",
+  "@languageFrench": { "description": "French language option" },
+
+  "languageArabic": "Arabic",
+  "@languageArabic": { "description": "Arabic language option" },
+
+  "cancel": "Cancel",
+  "@cancel": { "description": "Generic cancel button label" },
+
+  "teacherSchedule": "My sessions",
+  "@teacherSchedule": { "description": "Teacher schedule screen title" },
+
+  "noTeacherSessions": "No upcoming sessions",
+  "@noTeacherSessions": { "description": "Empty state on teacher schedule" },
+
+  "attendanceList": "Attendance",
+  "@attendanceList": { "description": "Section header for attendance list in teacher session detail" },
+
+  "attendees": "{count, plural, =0{No students} =1{1 student} other{{count} students}}",
+  "@attendees": {
+    "description": "Number of students enrolled in a session",
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+
+  "cancelSession": "Cancel session",
+  "@cancelSession": { "description": "Button to cancel a session" },
+
+  "cancelSessionConfirmTitle": "Cancel this session?",
+  "@cancelSessionConfirmTitle": { "description": "Dialog title when confirming session cancellation" },
+
+  "cancelSessionConfirmMessage": "Students will be notified. This cannot be undone.",
+  "@cancelSessionConfirmMessage": { "description": "Dialog body when confirming session cancellation" },
+
+  "cancelSessionConfirmButton": "Yes, cancel",
+  "@cancelSessionConfirmButton": { "description": "Confirm button in cancel session dialog" },
+
+  "sessionCancelledSuccess": "Session cancelled",
+  "@sessionCancelledSuccess": { "description": "Snackbar after teacher cancels a session" },
+
+  "editSession": "Edit session",
+  "@editSession": { "description": "Button / bottom sheet title for editing a session" },
+
+  "editRoom": "Room",
+  "@editRoom": { "description": "Field label for room in edit session sheet" },
+
+  "saveChanges": "Save changes",
+  "@saveChanges": { "description": "Save button in edit session sheet" },
+
+  "sessionUpdated": "Session updated",
+  "@sessionUpdated": { "description": "Snackbar after teacher edits a session" },
+
+  "navCourses": "Courses",
+  "@navCourses": { "description": "Sidebar nav: courses" },
+
+  "navStudents": "Students",
+  "@navStudents": { "description": "Sidebar nav: students" },
+
+  "navTeachers": "Teachers",
+  "@navTeachers": { "description": "Sidebar nav: teachers" },
+
+  "navAnnouncements": "Announcements",
+  "@navAnnouncements": { "description": "Sidebar nav: announcements" },
+
+  "navSessions": "Sessions",
+  "@navSessions": { "description": "Sidebar nav: sessions" },
+
+  "navSettings": "Settings",
+  "@navSettings": { "description": "Sidebar nav: settings" },
+
+  "createCourse": "Create course",
+  "@createCourse": { "description": "Button to open create course drawer" },
+
+  "editCourse": "Edit course",
+  "@editCourse": { "description": "Button / drawer title to edit a course" },
+
+  "courseName": "Name",
+  "@courseName": { "description": "Field label for course name" },
+
+  "discipline": "Discipline",
+  "@discipline": { "description": "Field label for course discipline" },
+
+  "room": "Room",
+  "@room": { "description": "Field label for course room" },
+
+  "teacher": "Teacher",
+  "@teacher": { "description": "Field label for assigned teacher" },
+
+  "recurrenceDays": "Days",
+  "@recurrenceDays": { "description": "Field label for recurrence days" },
+
+  "recurrenceTime": "Time",
+  "@recurrenceTime": { "description": "Field label for recurrence time" },
+
+  "recurrenceEndsAt": "Ends on",
+  "@recurrenceEndsAt": { "description": "Field label for recurrence end date" },
+
+  "noCourses": "No courses yet",
+  "@noCourses": { "description": "Empty state for courses list" },
+
+  "generateSessions": "Generate next 4 weeks",
+  "@generateSessions": { "description": "Button to generate sessions for next 4 weeks" },
+
+  "sessionsGenerated": "Sessions generated",
+  "@sessionsGenerated": { "description": "Snackbar after generating sessions" },
+
+  "fieldRequired": "This field is required",
+  "@fieldRequired": { "description": "Generic validation: field is empty" },
+
+  "courseSaved": "Course saved",
+  "@courseSaved": { "description": "Snackbar after saving a course" },
+
+  "noSessions": "No sessions for this course",
+  "@noSessions": { "description": "Empty state for sessions list" },
+
+  "cancelAllFuture": "Cancel all future",
+  "@cancelAllFuture": { "description": "Button to cancel all future sessions" },
+
+  "cancelAllFutureConfirmTitle": "Cancel all future sessions?",
+  "@cancelAllFutureConfirmTitle": { "description": "Dialog title for cancel all future" },
+
+  "cancelAllFutureConfirmMessage": "All upcoming sessions for this course will be cancelled. Students will be notified.",
+  "@cancelAllFutureConfirmMessage": { "description": "Dialog body for cancel all future" },
+
+  "cancelAllFutureConfirmButton": "Yes, cancel all",
+  "@cancelAllFutureConfirmButton": { "description": "Confirm button for cancel all future dialog" },
+
+  "sessionsCancelledCount": "{count, plural, =1{1 session cancelled} other{{count} sessions cancelled}}",
+  "@sessionsCancelledCount": {
+    "description": "Snackbar after cancelling future sessions",
+    "placeholders": { "count": { "type": "int" } }
+  },
+
+  "createStudent": "Create student",
+  "@createStudent": { "description": "Button to create a student account" },
+
+  "createTeacher": "Create teacher",
+  "@createTeacher": { "description": "Button to create a teacher account" },
+
+  "createUser": "Create account",
+  "@createUser": { "description": "Drawer title for creating a user" },
+
+  "fullName": "Full name",
+  "@fullName": { "description": "Field label for user full name" },
+
+  "noStudents": "No students yet",
+  "@noStudents": { "description": "Empty state for students list" },
+
+  "noTeachers": "No teachers yet",
+  "@noTeachers": { "description": "Empty state for teachers list" },
+
+  "userCreated": "Account created",
+  "@userCreated": { "description": "Snackbar after creating a user" },
+
+  "enrollments": "Enrollments",
+  "@enrollments": { "description": "Section header for student enrollments" },
+
+  "enroll": "Enroll",
+  "@enroll": { "description": "Button to enroll student in course" },
+
+  "unenroll": "Unenroll",
+  "@unenroll": { "description": "Button to unenroll student from course" },
+
+  "unenrollConfirmTitle": "Unenroll student?",
+  "@unenrollConfirmTitle": { "description": "Dialog title for unenroll" },
+
+  "unenrollConfirmMessage": "The student will lose access to this course.",
+  "@unenrollConfirmMessage": { "description": "Dialog body for unenroll" },
+
+  "unenrollConfirmButton": "Yes, unenroll",
+  "@unenrollConfirmButton": { "description": "Confirm button in unenroll dialog" },
+
+  "assignedCourses": "Assigned courses",
+  "@assignedCourses": { "description": "Section header for teacher assigned courses" },
+
+  "assignCourse": "Assign course",
+  "@assignCourse": { "description": "Button to assign a course to a teacher" },
+
+  "sendAnnouncement": "Send announcement",
+  "@sendAnnouncement": { "description": "Button to send an announcement" },
+
+  "announcementTitle": "Title",
+  "@announcementTitle": { "description": "Field label for announcement title" },
+
+  "announcementBody": "Message",
+  "@announcementBody": { "description": "Field label for announcement body" },
+
+  "targetAudience": "Audience",
+  "@targetAudience": { "description": "Field label for announcement target audience" },
+
+  "targetAll": "Everyone",
+  "@targetAll": { "description": "Audience option: all users" },
+
+  "targetStudents": "Students only",
+  "@targetStudents": { "description": "Audience option: students" },
+
+  "targetTeachers": "Teachers only",
+  "@targetTeachers": { "description": "Audience option: teachers" },
+
+  "announcementSent": "Announcement sent",
+  "@announcementSent": { "description": "Snackbar after sending announcement" },
+
+  "history": "History",
+  "@history": { "description": "Section header for announcement history" },
+
+  "noAnnouncementsHistory": "No announcements sent yet",
+  "@noAnnouncementsHistory": { "description": "Empty state for announcement history" },
+
+  "settings": "Settings",
+  "@settings": { "description": "Settings screen title" },
+
+  "adminProfile": "Admin profile",
+  "@adminProfile": { "description": "Settings section header" },
+
+  "monday": "Mon",
+  "@monday": { "description": "Monday abbreviation" },
+
+  "tuesday": "Tue",
+  "@tuesday": { "description": "Tuesday abbreviation" },
+
+  "wednesday": "Wed",
+  "@wednesday": { "description": "Wednesday abbreviation" },
+
+  "thursday": "Thu",
+  "@thursday": { "description": "Thursday abbreviation" },
+
+  "friday": "Fri",
+  "@friday": { "description": "Friday abbreviation" },
+
+  "saturday": "Sat",
+  "@saturday": { "description": "Saturday abbreviation" },
+
+  "sunday": "Sun",
+  "@sunday": { "description": "Sunday abbreviation" },
+
+  "noneSelected": "None",
+  "@noneSelected": { "description": "Placeholder when no teacher or value is selected" }
+}

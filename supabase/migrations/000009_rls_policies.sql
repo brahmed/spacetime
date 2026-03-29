@@ -1,5 +1,5 @@
 -- ─── Helper: current user role ────────────────────────────────────────────────
-create or replace function public.current_role()
+create or replace function public.get_user_role()
 returns text
 language sql
 stable
@@ -37,8 +37,8 @@ create policy "profiles: self update"
 create policy "profiles: admin full access"
   on public.profiles for all
   to authenticated
-  using (public.current_role() = 'admin')
-  with check (public.current_role() = 'admin');
+  using (public.get_user_role() = 'admin')
+  with check (public.get_user_role() = 'admin');
 
 -- ─── courses ──────────────────────────────────────────────────────────────────
 -- Students and teachers can read all courses
@@ -51,8 +51,8 @@ create policy "courses: authenticated read"
 create policy "courses: admin full access"
   on public.courses for all
   to authenticated
-  using (public.current_role() = 'admin')
-  with check (public.current_role() = 'admin');
+  using (public.get_user_role() = 'admin')
+  with check (public.get_user_role() = 'admin');
 
 -- ─── sessions ─────────────────────────────────────────────────────────────────
 -- All authenticated users can read sessions
@@ -66,7 +66,7 @@ create policy "sessions: teacher update own courses"
   on public.sessions for update
   to authenticated
   using (
-    public.current_role() = 'teacher'
+    public.get_user_role() = 'teacher'
     and exists (
       select 1 from public.courses c
       where c.id = sessions.course_id
@@ -74,7 +74,7 @@ create policy "sessions: teacher update own courses"
     )
   )
   with check (
-    public.current_role() = 'teacher'
+    public.get_user_role() = 'teacher'
     and exists (
       select 1 from public.courses c
       where c.id = sessions.course_id
@@ -86,8 +86,8 @@ create policy "sessions: teacher update own courses"
 create policy "sessions: admin full access"
   on public.sessions for all
   to authenticated
-  using (public.current_role() = 'admin')
-  with check (public.current_role() = 'admin');
+  using (public.get_user_role() = 'admin')
+  with check (public.get_user_role() = 'admin');
 
 -- ─── enrollments ──────────────────────────────────────────────────────────────
 -- Students read their own enrollments
@@ -101,7 +101,7 @@ create policy "enrollments: teacher read own courses"
   on public.enrollments for select
   to authenticated
   using (
-    public.current_role() = 'teacher'
+    public.get_user_role() = 'teacher'
     and exists (
       select 1 from public.courses c
       where c.id = enrollments.course_id
@@ -113,8 +113,8 @@ create policy "enrollments: teacher read own courses"
 create policy "enrollments: admin full access"
   on public.enrollments for all
   to authenticated
-  using (public.current_role() = 'admin')
-  with check (public.current_role() = 'admin');
+  using (public.get_user_role() = 'admin')
+  with check (public.get_user_role() = 'admin');
 
 -- ─── attendance ───────────────────────────────────────────────────────────────
 -- Students read and update their own attendance
@@ -134,7 +134,7 @@ create policy "attendance: teacher read own sessions"
   on public.attendance for select
   to authenticated
   using (
-    public.current_role() = 'teacher'
+    public.get_user_role() = 'teacher'
     and exists (
       select 1 from public.sessions s
       join public.courses c on c.id = s.course_id
@@ -147,8 +147,8 @@ create policy "attendance: teacher read own sessions"
 create policy "attendance: admin full access"
   on public.attendance for all
   to authenticated
-  using (public.current_role() = 'admin')
-  with check (public.current_role() = 'admin');
+  using (public.get_user_role() = 'admin')
+  with check (public.get_user_role() = 'admin');
 
 -- ─── announcements ────────────────────────────────────────────────────────────
 -- All authenticated users can read announcements targeted at them
@@ -157,16 +157,16 @@ create policy "announcements: read relevant"
   to authenticated
   using (
     target_role = 'all'
-    or target_role = public.current_role()
-    or public.current_role() = 'admin'
+    or target_role = public.get_user_role()
+    or public.get_user_role() = 'admin'
   );
 
 -- Admin full access
 create policy "announcements: admin full access"
   on public.announcements for all
   to authenticated
-  using (public.current_role() = 'admin')
-  with check (public.current_role() = 'admin');
+  using (public.get_user_role() = 'admin')
+  with check (public.get_user_role() = 'admin');
 
 -- ─── notifications ────────────────────────────────────────────────────────────
 -- Users read and update their own notifications

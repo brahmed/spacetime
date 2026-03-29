@@ -19,13 +19,15 @@ packages/*/pubspec.lock
 **/.env
 **/.env.local
 
-# Firebase — never commit
+# Firebase — never commit real credentials
 **/google-services.json
 **/GoogleService-Info.plist
-**/firebase_options.dart
 
 # Supabase
 supabase/.temp/
+
+# Scripts containing secrets — never commit
+scripts/create_users.sh
 
 # macOS
 .DS_Store

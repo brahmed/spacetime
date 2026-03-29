@@ -64,10 +64,19 @@ class SessionRepository {
   ) async {
     try {
       final now = DateTime.now().toUtc().toIso8601String();
+      // Fetch course_ids for this teacher first, then filter sessions.
+      final courses = await _supabase
+          .from('courses')
+          .select('id')
+          .eq('teacher_id', teacherId);
+      final courseIds =
+          courses.map<String>((c) => c['id'] as String).toList();
+      if (courseIds.isEmpty) return [];
+
       final data = await _supabase
           .from('sessions')
-          .select('*, courses!inner(teacher_id)')
-          .eq('courses.teacher_id', teacherId)
+          .select()
+          .inFilter('course_id', courseIds)
           .gte('starts_at', now)
           .order('starts_at');
       return data.map(Session.fromJson).toList();

@@ -1,6 +1,6 @@
 -- ─── SpaceTime seed data ──────────────────────────────────────────────────────
 -- All data is entirely fictional. No real users or personal data.
--- Passwords are all: SpaceTime2024!
+-- Passwords are all: SpaceTime2025!
 -- UUIDs are fixed so seed is idempotent when re-applied.
 
 -- ─── Auth users ───────────────────────────────────────────────────────────────
@@ -13,90 +13,118 @@ insert into auth.users (
   raw_app_meta_data, raw_user_meta_data, is_super_admin
 )
 values
-  -- Admins
+  -- Admin
   (
     '00000000-0000-0000-0000-000000000001', '00000000-0000-0000-0000-000000000000',
-    'authenticated', 'authenticated', 'admin@spacetime.art',
-    crypt('SpaceTime2024!', gen_salt('bf')),
+    'authenticated', 'authenticated', 'rick.rubin@spacetime.com',
+    crypt('SpaceTime2025!', gen_salt('bf')),
     now(), now(), now(),
     '{"provider":"email","providers":["email"]}'::jsonb, '{}'::jsonb, false
   ),
   -- Teachers
   (
     '00000000-0000-0000-0000-000000000011', '00000000-0000-0000-0000-000000000000',
-    'authenticated', 'authenticated', 'marie.dupont@spacetime.art',
-    crypt('SpaceTime2024!', gen_salt('bf')),
+    'authenticated', 'authenticated', 'jimi.hendrix@spacetime.com',
+    crypt('SpaceTime2025!', gen_salt('bf')),
     now(), now(), now(),
     '{"provider":"email","providers":["email"]}'::jsonb, '{}'::jsonb, false
   ),
   (
     '00000000-0000-0000-0000-000000000012', '00000000-0000-0000-0000-000000000000',
-    'authenticated', 'authenticated', 'carlos.ruiz@spacetime.art',
-    crypt('SpaceTime2024!', gen_salt('bf')),
+    'authenticated', 'authenticated', 'miles.davis@spacetime.com',
+    crypt('SpaceTime2025!', gen_salt('bf')),
     now(), now(), now(),
     '{"provider":"email","providers":["email"]}'::jsonb, '{}'::jsonb, false
   ),
   (
     '00000000-0000-0000-0000-000000000013', '00000000-0000-0000-0000-000000000000',
-    'authenticated', 'authenticated', 'aiko.tanaka@spacetime.art',
-    crypt('SpaceTime2024!', gen_salt('bf')),
+    'authenticated', 'authenticated', 'john.bonham@spacetime.com',
+    crypt('SpaceTime2025!', gen_salt('bf')),
     now(), now(), now(),
     '{"provider":"email","providers":["email"]}'::jsonb, '{}'::jsonb, false
   ),
   -- Students
   (
     '00000000-0000-0000-0000-000000000021', '00000000-0000-0000-0000-000000000000',
-    'authenticated', 'authenticated', 'sofia.martin@example.com',
-    crypt('SpaceTime2024!', gen_salt('bf')),
+    'authenticated', 'authenticated', 'stevie.vaughan@spacetime.com',
+    crypt('SpaceTime2025!', gen_salt('bf')),
     now(), now(), now(),
     '{"provider":"email","providers":["email"]}'::jsonb, '{}'::jsonb, false
   ),
   (
     '00000000-0000-0000-0000-000000000022', '00000000-0000-0000-0000-000000000000',
-    'authenticated', 'authenticated', 'luca.ferrari@example.com',
-    crypt('SpaceTime2024!', gen_salt('bf')),
+    'authenticated', 'authenticated', 'eric.clapton@spacetime.com',
+    crypt('SpaceTime2025!', gen_salt('bf')),
     now(), now(), now(),
     '{"provider":"email","providers":["email"]}'::jsonb, '{}'::jsonb, false
   ),
   (
     '00000000-0000-0000-0000-000000000023', '00000000-0000-0000-0000-000000000000',
-    'authenticated', 'authenticated', 'amara.ndiaye@example.com',
-    crypt('SpaceTime2024!', gen_salt('bf')),
+    'authenticated', 'authenticated', 'john.coltrane@spacetime.com',
+    crypt('SpaceTime2025!', gen_salt('bf')),
     now(), now(), now(),
     '{"provider":"email","providers":["email"]}'::jsonb, '{}'::jsonb, false
   ),
   (
     '00000000-0000-0000-0000-000000000024', '00000000-0000-0000-0000-000000000000',
-    'authenticated', 'authenticated', 'noah.schmidt@example.com',
-    crypt('SpaceTime2024!', gen_salt('bf')),
-    now(), now(), now(),
-    '{"provider":"email","providers":["email"]}'::jsonb, '{}'::jsonb, false
-  ),
-  (
-    '00000000-0000-0000-0000-000000000025', '00000000-0000-0000-0000-000000000000',
-    'authenticated', 'authenticated', 'isabela.costa@example.com',
-    crypt('SpaceTime2024!', gen_salt('bf')),
+    'authenticated', 'authenticated', 'herbie.hancock@spacetime.com',
+    crypt('SpaceTime2025!', gen_salt('bf')),
     now(), now(), now(),
     '{"provider":"email","providers":["email"]}'::jsonb, '{}'::jsonb, false
   ),
   (
     '00000000-0000-0000-0000-000000000026', '00000000-0000-0000-0000-000000000000',
-    'authenticated', 'authenticated', 'yusuf.ali@example.com',
-    crypt('SpaceTime2024!', gen_salt('bf')),
+    'authenticated', 'authenticated', 'neil.peart@spacetime.com',
+    crypt('SpaceTime2025!', gen_salt('bf')),
     now(), now(), now(),
     '{"provider":"email","providers":["email"]}'::jsonb, '{}'::jsonb, false
   ),
   (
     '00000000-0000-0000-0000-000000000027', '00000000-0000-0000-0000-000000000000',
-    'authenticated', 'authenticated', 'chloe.bernard@example.com',
-    crypt('SpaceTime2024!', gen_salt('bf')),
+    'authenticated', 'authenticated', 'prince@spacetime.com',
+    crypt('SpaceTime2025!', gen_salt('bf')),
     now(), now(), now(),
     '{"provider":"email","providers":["email"]}'::jsonb, '{}'::jsonb, false
   ),
   (
     '00000000-0000-0000-0000-000000000028', '00000000-0000-0000-0000-000000000000',
-    'authenticated', 'authenticated', 'daniel.kim@example.com',
-    crypt('SpaceTime2024!', gen_salt('bf')),
+    'authenticated', 'authenticated', 'thom.yorke@spacetime.com',
+    crypt('SpaceTime2025!', gen_salt('bf')),
+    now(), now(), now(),
+    '{"provider":"email","providers":["email"]}'::jsonb, '{}'::jsonb, false
+  ),
+  (
+    '00000000-0000-0000-0000-000000000029', '00000000-0000-0000-0000-000000000000',
+    'authenticated', 'authenticated', 'buddy.rich@spacetime.com',
+    crypt('SpaceTime2025!', gen_salt('bf')),
+    now(), now(), now(),
+    '{"provider":"email","providers":["email"]}'::jsonb, '{}'::jsonb, false
+  ),
+  (
+    '00000000-0000-0000-0000-000000000031', '00000000-0000-0000-0000-000000000000',
+    'authenticated', 'authenticated', 'keith.moon@spacetime.com',
+    crypt('SpaceTime2025!', gen_salt('bf')),
+    now(), now(), now(),
+    '{"provider":"email","providers":["email"]}'::jsonb, '{}'::jsonb, false
+  ),
+  (
+    '00000000-0000-0000-0000-000000000036', '00000000-0000-0000-0000-000000000000',
+    'authenticated', 'authenticated', 'phil.collins@spacetime.com',
+    crypt('SpaceTime2025!', gen_salt('bf')),
+    now(), now(), now(),
+    '{"provider":"email","providers":["email"]}'::jsonb, '{}'::jsonb, false
+  ),
+  (
+    '00000000-0000-0000-0000-000000000037', '00000000-0000-0000-0000-000000000000',
+    'authenticated', 'authenticated', 'danny.carey@spacetime.com',
+    crypt('SpaceTime2025!', gen_salt('bf')),
+    now(), now(), now(),
+    '{"provider":"email","providers":["email"]}'::jsonb, '{}'::jsonb, false
+  ),
+  (
+    '00000000-0000-0000-0000-000000000038', '00000000-0000-0000-0000-000000000000',
+    'authenticated', 'authenticated', 'chad.smith@spacetime.com',
+    crypt('SpaceTime2025!', gen_salt('bf')),
     now(), now(), now(),
     '{"provider":"email","providers":["email"]}'::jsonb, '{}'::jsonb, false
   )
@@ -106,20 +134,24 @@ on conflict (id) do nothing;
 insert into public.profiles (id, full_name, role, created_at)
 values
   -- Admin
-  ('00000000-0000-0000-0000-000000000001', 'Admin SpaceTime',   'admin',   now() - interval '6 months'),
+  ('00000000-0000-0000-0000-000000000001', 'Rick Rubin',         'admin',   now() - interval '6 months'),
   -- Teachers
-  ('00000000-0000-0000-0000-000000000011', 'Marie Dupont',      'teacher', now() - interval '5 months'),
-  ('00000000-0000-0000-0000-000000000012', 'Carlos Ruiz',       'teacher', now() - interval '5 months'),
-  ('00000000-0000-0000-0000-000000000013', 'Aiko Tanaka',       'teacher', now() - interval '4 months'),
+  ('00000000-0000-0000-0000-000000000011', 'Jimi Hendrix',       'teacher', now() - interval '5 months'),
+  ('00000000-0000-0000-0000-000000000012', 'Miles Davis',        'teacher', now() - interval '5 months'),
+  ('00000000-0000-0000-0000-000000000013', 'John Bonham',        'teacher', now() - interval '4 months'),
   -- Students
-  ('00000000-0000-0000-0000-000000000021', 'Sofia Martin',      'student', now() - interval '3 months'),
-  ('00000000-0000-0000-0000-000000000022', 'Luca Ferrari',      'student', now() - interval '3 months'),
-  ('00000000-0000-0000-0000-000000000023', 'Amara Ndiaye',      'student', now() - interval '2 months'),
-  ('00000000-0000-0000-0000-000000000024', 'Noah Schmidt',      'student', now() - interval '2 months'),
-  ('00000000-0000-0000-0000-000000000025', 'Isabela Costa',     'student', now() - interval '2 months'),
-  ('00000000-0000-0000-0000-000000000026', 'Yusuf Ali',         'student', now() - interval '1 month'),
-  ('00000000-0000-0000-0000-000000000027', 'Chloé Bernard',     'student', now() - interval '1 month'),
-  ('00000000-0000-0000-0000-000000000028', 'Daniel Kim',        'student', now() - interval '3 weeks')
+  ('00000000-0000-0000-0000-000000000021', 'Stevie Ray Vaughan', 'student', now() - interval '3 months'),
+  ('00000000-0000-0000-0000-000000000022', 'Eric Clapton',       'student', now() - interval '3 months'),
+  ('00000000-0000-0000-0000-000000000023', 'John Coltrane',      'student', now() - interval '2 months'),
+  ('00000000-0000-0000-0000-000000000024', 'Herbie Hancock',     'student', now() - interval '2 months'),
+  ('00000000-0000-0000-0000-000000000026', 'Neil Peart',         'student', now() - interval '1 month'),
+  ('00000000-0000-0000-0000-000000000027', 'Prince',             'student', now() - interval '1 month'),
+  ('00000000-0000-0000-0000-000000000028', 'Thom Yorke',         'student', now() - interval '3 weeks'),
+  ('00000000-0000-0000-0000-000000000029', 'Buddy Rich',         'student', now() - interval '3 weeks'),
+  ('00000000-0000-0000-0000-000000000031', 'Keith Moon',         'student', now() - interval '2 weeks'),
+  ('00000000-0000-0000-0000-000000000036', 'Phil Collins',       'student', now() - interval '5 days'),
+  ('00000000-0000-0000-0000-000000000037', 'Danny Carey',        'student', now() - interval '4 days'),
+  ('00000000-0000-0000-0000-000000000038', 'Chad Smith',         'student', now() - interval '3 days')
 on conflict (id) do nothing;
 
 -- ─── Courses ──────────────────────────────────────────────────────────────────
@@ -129,7 +161,7 @@ values
     '10000000-0000-0000-0000-000000000001',
     'Contemporary Dance — Beginners',
     'Dance', 'Studio A',
-    '00000000-0000-0000-0000-000000000011',  -- Marie Dupont
+    '00000000-0000-0000-0000-000000000011',  -- Jimi Hendrix
     array[1, 3],   -- Monday + Wednesday
     '18:30',
     now() - interval '3 months'
@@ -138,7 +170,7 @@ values
     '10000000-0000-0000-0000-000000000002',
     'Contemporary Dance — Advanced',
     'Dance', 'Studio A',
-    '00000000-0000-0000-0000-000000000011',  -- Marie Dupont
+    '00000000-0000-0000-0000-000000000011',  -- Jimi Hendrix
     array[2, 4],   -- Tuesday + Thursday
     '19:00',
     now() - interval '3 months'
@@ -147,7 +179,7 @@ values
     '10000000-0000-0000-0000-000000000003',
     'Classical Guitar — Level 1',
     'Music', 'Room 3',
-    '00000000-0000-0000-0000-000000000012',  -- Carlos Ruiz
+    '00000000-0000-0000-0000-000000000012',  -- Miles Davis
     array[2, 5],   -- Tuesday + Friday
     '17:00',
     now() - interval '2 months'
@@ -156,7 +188,7 @@ values
     '10000000-0000-0000-0000-000000000004',
     'Classical Guitar — Level 2',
     'Music', 'Room 3',
-    '00000000-0000-0000-0000-000000000012',  -- Carlos Ruiz
+    '00000000-0000-0000-0000-000000000012',  -- Miles Davis
     array[3],      -- Wednesday only
     '18:00',
     now() - interval '2 months'
@@ -165,7 +197,7 @@ values
     '10000000-0000-0000-0000-000000000005',
     'Ikebana & Floral Arts',
     'Visual Arts', 'Workshop',
-    '00000000-0000-0000-0000-000000000013',  -- Aiko Tanaka
+    '00000000-0000-0000-0000-000000000013',  -- John Bonham
     array[6],      -- Saturday
     '10:00',
     now() - interval '1 month'
@@ -227,36 +259,36 @@ on conflict (id) do nothing;
 insert into public.enrollments (course_id, student_id)
 values
   -- Contemporary Dance Beginners (course 1)
-  ('10000000-0000-0000-0000-000000000001', '00000000-0000-0000-0000-000000000021'),  -- Sofia
-  ('10000000-0000-0000-0000-000000000001', '00000000-0000-0000-0000-000000000022'),  -- Luca
-  ('10000000-0000-0000-0000-000000000001', '00000000-0000-0000-0000-000000000023'),  -- Amara
-  ('10000000-0000-0000-0000-000000000001', '00000000-0000-0000-0000-000000000027'),  -- Chloé
+  ('10000000-0000-0000-0000-000000000001', '00000000-0000-0000-0000-000000000021'),  -- Stevie Ray Vaughan
+  ('10000000-0000-0000-0000-000000000001', '00000000-0000-0000-0000-000000000022'),  -- Eric Clapton
+  ('10000000-0000-0000-0000-000000000001', '00000000-0000-0000-0000-000000000023'),  -- John Coltrane
+  ('10000000-0000-0000-0000-000000000001', '00000000-0000-0000-0000-000000000027'),  -- Prince
   -- Contemporary Dance Advanced (course 2)
-  ('10000000-0000-0000-0000-000000000002', '00000000-0000-0000-0000-000000000024'),  -- Noah
-  ('10000000-0000-0000-0000-000000000002', '00000000-0000-0000-0000-000000000025'),  -- Isabela
+  ('10000000-0000-0000-0000-000000000002', '00000000-0000-0000-0000-000000000024'),  -- Herbie Hancock
+  ('10000000-0000-0000-0000-000000000002', '00000000-0000-0000-0000-000000000026'),  -- Neil Peart
   -- Classical Guitar Level 1 (course 3)
-  ('10000000-0000-0000-0000-000000000003', '00000000-0000-0000-0000-000000000022'),  -- Luca
-  ('10000000-0000-0000-0000-000000000003', '00000000-0000-0000-0000-000000000026'),  -- Yusuf
-  ('10000000-0000-0000-0000-000000000003', '00000000-0000-0000-0000-000000000028'),  -- Daniel
+  ('10000000-0000-0000-0000-000000000003', '00000000-0000-0000-0000-000000000022'),  -- Eric Clapton
+  ('10000000-0000-0000-0000-000000000003', '00000000-0000-0000-0000-000000000028'),  -- Thom Yorke
+  ('10000000-0000-0000-0000-000000000003', '00000000-0000-0000-0000-000000000029'),  -- Buddy Rich
   -- Ikebana (course 5)
-  ('10000000-0000-0000-0000-000000000005', '00000000-0000-0000-0000-000000000021'),  -- Sofia
-  ('10000000-0000-0000-0000-000000000005', '00000000-0000-0000-0000-000000000023'),  -- Amara
-  ('10000000-0000-0000-0000-000000000005', '00000000-0000-0000-0000-000000000027')   -- Chloé
+  ('10000000-0000-0000-0000-000000000005', '00000000-0000-0000-0000-000000000021'),  -- Stevie Ray Vaughan
+  ('10000000-0000-0000-0000-000000000005', '00000000-0000-0000-0000-000000000023'),  -- John Coltrane
+  ('10000000-0000-0000-0000-000000000005', '00000000-0000-0000-0000-000000000027')   -- Prince
 on conflict (course_id, student_id) do nothing;
 
 -- ─── Attendance (for sessions of course 1) ────────────────────────────────────
 -- Past session — varied statuses
 insert into public.attendance (session_id, student_id, status, updated_at)
 values
-  ('20000000-0000-0000-0000-000000000109', '00000000-0000-0000-0000-000000000021', 'confirmed', now() - interval '5 days'),
-  ('20000000-0000-0000-0000-000000000109', '00000000-0000-0000-0000-000000000022', 'cancelled',  now() - interval '5 days'),
-  ('20000000-0000-0000-0000-000000000109', '00000000-0000-0000-0000-000000000023', 'confirmed', now() - interval '5 days'),
-  ('20000000-0000-0000-0000-000000000109', '00000000-0000-0000-0000-000000000027', 'pending',   now() - interval '5 days'),
+  ('20000000-0000-0000-0000-000000000109', '00000000-0000-0000-0000-000000000021', 'confirmed', now() - interval '5 days'),  -- Stevie Ray Vaughan
+  ('20000000-0000-0000-0000-000000000109', '00000000-0000-0000-0000-000000000022', 'cancelled',  now() - interval '5 days'), -- Eric Clapton
+  ('20000000-0000-0000-0000-000000000109', '00000000-0000-0000-0000-000000000023', 'confirmed', now() - interval '5 days'),  -- John Coltrane
+  ('20000000-0000-0000-0000-000000000109', '00000000-0000-0000-0000-000000000027', 'pending',   now() - interval '5 days'),  -- Prince
   -- Upcoming sessions — all pending
-  ('20000000-0000-0000-0000-000000000101', '00000000-0000-0000-0000-000000000021', 'pending', now()),
-  ('20000000-0000-0000-0000-000000000101', '00000000-0000-0000-0000-000000000022', 'pending', now()),
-  ('20000000-0000-0000-0000-000000000101', '00000000-0000-0000-0000-000000000023', 'pending', now()),
-  ('20000000-0000-0000-0000-000000000101', '00000000-0000-0000-0000-000000000027', 'pending', now())
+  ('20000000-0000-0000-0000-000000000101', '00000000-0000-0000-0000-000000000021', 'pending', now()),  -- Stevie Ray Vaughan
+  ('20000000-0000-0000-0000-000000000101', '00000000-0000-0000-0000-000000000022', 'pending', now()),  -- Eric Clapton
+  ('20000000-0000-0000-0000-000000000101', '00000000-0000-0000-0000-000000000023', 'pending', now()),  -- John Coltrane
+  ('20000000-0000-0000-0000-000000000101', '00000000-0000-0000-0000-000000000027', 'pending', now())   -- Prince
 on conflict (session_id, student_id) do nothing;
 
 -- ─── Announcements ────────────────────────────────────────────────────────────
@@ -292,19 +324,19 @@ on conflict (id) do nothing;
 insert into public.notifications (user_id, title, body, type, read, created_at)
 values
   (
-    '00000000-0000-0000-0000-000000000021',  -- Sofia
+    '00000000-0000-0000-0000-000000000021',  -- Stevie Ray Vaughan
     'Class reminder',
     'Contemporary Dance — Beginners starts in 2 hours.',
     'reminder', false, now() - interval '2 hours'
   ),
   (
-    '00000000-0000-0000-0000-000000000021',  -- Sofia
+    '00000000-0000-0000-0000-000000000021',  -- Stevie Ray Vaughan
     'Welcome to SpaceTime!',
     'We are excited to launch our new class management platform.',
     'announcement', true, now() - interval '2 months'
   ),
   (
-    '00000000-0000-0000-0000-000000000024',  -- Noah
+    '00000000-0000-0000-0000-000000000024',  -- Herbie Hancock
     'Session cancelled',
     'Contemporary Dance — Advanced on Thursday has been cancelled.',
     'cancellation', false, now() - interval '1 day'
