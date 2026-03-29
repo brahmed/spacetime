@@ -218,4 +218,197 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get sessionUpdated => 'Session updated';
+
+  @override
+  String get navCourses => 'Courses';
+
+  @override
+  String get navStudents => 'Students';
+
+  @override
+  String get navTeachers => 'Teachers';
+
+  @override
+  String get navAnnouncements => 'Announcements';
+
+  @override
+  String get navSessions => 'Sessions';
+
+  @override
+  String get navSettings => 'Settings';
+
+  @override
+  String get createCourse => 'Create course';
+
+  @override
+  String get editCourse => 'Edit course';
+
+  @override
+  String get courseName => 'Name';
+
+  @override
+  String get discipline => 'Discipline';
+
+  @override
+  String get room => 'Room';
+
+  @override
+  String get teacher => 'Teacher';
+
+  @override
+  String get recurrenceDays => 'Days';
+
+  @override
+  String get recurrenceTime => 'Time';
+
+  @override
+  String get recurrenceEndsAt => 'Ends on';
+
+  @override
+  String get noCourses => 'No courses yet';
+
+  @override
+  String get generateSessions => 'Generate next 4 weeks';
+
+  @override
+  String get sessionsGenerated => 'Sessions generated';
+
+  @override
+  String get fieldRequired => 'This field is required';
+
+  @override
+  String get courseSaved => 'Course saved';
+
+  @override
+  String get noSessions => 'No sessions for this course';
+
+  @override
+  String get cancelAllFuture => 'Cancel all future';
+
+  @override
+  String get cancelAllFutureConfirmTitle => 'Cancel all future sessions?';
+
+  @override
+  String get cancelAllFutureConfirmMessage =>
+      'All upcoming sessions for this course will be cancelled. Students will be notified.';
+
+  @override
+  String get cancelAllFutureConfirmButton => 'Yes, cancel all';
+
+  @override
+  String sessionsCancelledCount(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count sessions cancelled',
+      one: '1 session cancelled',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get createStudent => 'Create student';
+
+  @override
+  String get createTeacher => 'Create teacher';
+
+  @override
+  String get createUser => 'Create account';
+
+  @override
+  String get fullName => 'Full name';
+
+  @override
+  String get noStudents => 'No students yet';
+
+  @override
+  String get noTeachers => 'No teachers yet';
+
+  @override
+  String get userCreated => 'Account created';
+
+  @override
+  String get enrollments => 'Enrollments';
+
+  @override
+  String get enroll => 'Enroll';
+
+  @override
+  String get unenroll => 'Unenroll';
+
+  @override
+  String get unenrollConfirmTitle => 'Unenroll student?';
+
+  @override
+  String get unenrollConfirmMessage =>
+      'The student will lose access to this course.';
+
+  @override
+  String get unenrollConfirmButton => 'Yes, unenroll';
+
+  @override
+  String get assignedCourses => 'Assigned courses';
+
+  @override
+  String get assignCourse => 'Assign course';
+
+  @override
+  String get sendAnnouncement => 'Send announcement';
+
+  @override
+  String get announcementTitle => 'Title';
+
+  @override
+  String get announcementBody => 'Message';
+
+  @override
+  String get targetAudience => 'Audience';
+
+  @override
+  String get targetAll => 'Everyone';
+
+  @override
+  String get targetStudents => 'Students only';
+
+  @override
+  String get targetTeachers => 'Teachers only';
+
+  @override
+  String get announcementSent => 'Announcement sent';
+
+  @override
+  String get history => 'History';
+
+  @override
+  String get noAnnouncementsHistory => 'No announcements sent yet';
+
+  @override
+  String get settings => 'Settings';
+
+  @override
+  String get adminProfile => 'Admin profile';
+
+  @override
+  String get monday => 'Mon';
+
+  @override
+  String get tuesday => 'Tue';
+
+  @override
+  String get wednesday => 'Wed';
+
+  @override
+  String get thursday => 'Thu';
+
+  @override
+  String get friday => 'Fri';
+
+  @override
+  String get saturday => 'Sat';
+
+  @override
+  String get sunday => 'Sun';
+
+  @override
+  String get noneSelected => 'None';
 }

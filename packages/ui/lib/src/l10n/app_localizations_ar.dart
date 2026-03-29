@@ -221,4 +221,200 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get sessionUpdated => 'تم تحديث الحصة';
+
+  @override
+  String get navCourses => 'الدورات';
+
+  @override
+  String get navStudents => 'الطلاب';
+
+  @override
+  String get navTeachers => 'الأساتذة';
+
+  @override
+  String get navAnnouncements => 'الإعلانات';
+
+  @override
+  String get navSessions => 'الحصص';
+
+  @override
+  String get navSettings => 'الإعدادات';
+
+  @override
+  String get createCourse => 'إنشاء دورة';
+
+  @override
+  String get editCourse => 'تعديل الدورة';
+
+  @override
+  String get courseName => 'الاسم';
+
+  @override
+  String get discipline => 'التخصص';
+
+  @override
+  String get room => 'القاعة';
+
+  @override
+  String get teacher => 'الأستاذ';
+
+  @override
+  String get recurrenceDays => 'الأيام';
+
+  @override
+  String get recurrenceTime => 'الوقت';
+
+  @override
+  String get recurrenceEndsAt => 'تنتهي في';
+
+  @override
+  String get noCourses => 'لا توجد دورات بعد';
+
+  @override
+  String get generateSessions => 'توليد الأسابيع الأربعة القادمة';
+
+  @override
+  String get sessionsGenerated => 'تم توليد الحصص';
+
+  @override
+  String get fieldRequired => 'هذا الحقل مطلوب';
+
+  @override
+  String get courseSaved => 'تم حفظ الدورة';
+
+  @override
+  String get noSessions => 'لا توجد حصص لهذه الدورة';
+
+  @override
+  String get cancelAllFuture => 'إلغاء جميع القادمة';
+
+  @override
+  String get cancelAllFutureConfirmTitle => 'إلغاء جميع الحصص القادمة؟';
+
+  @override
+  String get cancelAllFutureConfirmMessage =>
+      'سيتم إلغاء جميع الحصص القادمة لهذه الدورة. سيتم إشعار الطلاب.';
+
+  @override
+  String get cancelAllFutureConfirmButton => 'نعم، إلغاء الكل';
+
+  @override
+  String sessionsCancelledCount(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: 'تم إلغاء $count حصة',
+      many: 'تم إلغاء $count حصة',
+      few: 'تم إلغاء $count حصص',
+      two: 'تم إلغاء حصتين',
+      one: 'تم إلغاء حصة واحدة',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get createStudent => 'إنشاء طالب';
+
+  @override
+  String get createTeacher => 'إنشاء أستاذ';
+
+  @override
+  String get createUser => 'إنشاء حساب';
+
+  @override
+  String get fullName => 'الاسم الكامل';
+
+  @override
+  String get noStudents => 'لا يوجد طلاب بعد';
+
+  @override
+  String get noTeachers => 'لا يوجد أساتذة بعد';
+
+  @override
+  String get userCreated => 'تم إنشاء الحساب';
+
+  @override
+  String get enrollments => 'التسجيلات';
+
+  @override
+  String get enroll => 'تسجيل';
+
+  @override
+  String get unenroll => 'إلغاء التسجيل';
+
+  @override
+  String get unenrollConfirmTitle => 'إلغاء تسجيل الطالب؟';
+
+  @override
+  String get unenrollConfirmMessage =>
+      'لن يتمكن الطالب من الوصول إلى هذه الدورة.';
+
+  @override
+  String get unenrollConfirmButton => 'نعم، إلغاء التسجيل';
+
+  @override
+  String get assignedCourses => 'الدورات المسندة';
+
+  @override
+  String get assignCourse => 'إسناد دورة';
+
+  @override
+  String get sendAnnouncement => 'إرسال إعلان';
+
+  @override
+  String get announcementTitle => 'العنوان';
+
+  @override
+  String get announcementBody => 'الرسالة';
+
+  @override
+  String get targetAudience => 'الجمهور';
+
+  @override
+  String get targetAll => 'الجميع';
+
+  @override
+  String get targetStudents => 'الطلاب فقط';
+
+  @override
+  String get targetTeachers => 'الأساتذة فقط';
+
+  @override
+  String get announcementSent => 'تم إرسال الإعلان';
+
+  @override
+  String get history => 'السجل';
+
+  @override
+  String get noAnnouncementsHistory => 'لم يتم إرسال أي إعلانات بعد';
+
+  @override
+  String get settings => 'الإعدادات';
+
+  @override
+  String get adminProfile => 'الملف الشخصي للمشرف';
+
+  @override
+  String get monday => 'الإثنين';
+
+  @override
+  String get tuesday => 'الثلاثاء';
+
+  @override
+  String get wednesday => 'الأربعاء';
+
+  @override
+  String get thursday => 'الخميس';
+
+  @override
+  String get friday => 'الجمعة';
+
+  @override
+  String get saturday => 'السبت';
+
+  @override
+  String get sunday => 'الأحد';
+
+  @override
+  String get noneSelected => 'لا شيء';
 }

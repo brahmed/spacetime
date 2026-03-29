@@ -12,11 +12,24 @@ class SpaceTimeBackofficeApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (_) => AuthBloc(
-        AuthRepository(Supabase.instance.client),
-      )..add(const AuthStarted()),
-      child: const _AppView(),
+    final client = Supabase.instance.client;
+
+    return MultiRepositoryProvider(
+      providers: [
+        RepositoryProvider(create: (_) => AuthRepository(client)),
+        RepositoryProvider(create: (_) => ProfileRepository(client)),
+        RepositoryProvider(create: (_) => CourseRepository(client)),
+        RepositoryProvider(create: (_) => SessionRepository(client)),
+        RepositoryProvider(create: (_) => EnrollmentRepository(client)),
+        RepositoryProvider(create: (_) => AnnouncementRepository(client)),
+        RepositoryProvider(create: (_) => AttendanceRepository(client)),
+      ],
+      child: BlocProvider(
+        create: (context) => AuthBloc(
+          context.read<AuthRepository>(),
+        )..add(const AuthStarted()),
+        child: const _AppView(),
+      ),
     );
   }
 }

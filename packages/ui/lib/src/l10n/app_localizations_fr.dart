@@ -220,4 +220,198 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get sessionUpdated => 'Séance mise à jour';
+
+  @override
+  String get navCourses => 'Cours';
+
+  @override
+  String get navStudents => 'Élèves';
+
+  @override
+  String get navTeachers => 'Professeurs';
+
+  @override
+  String get navAnnouncements => 'Annonces';
+
+  @override
+  String get navSessions => 'Séances';
+
+  @override
+  String get navSettings => 'Paramètres';
+
+  @override
+  String get createCourse => 'Créer un cours';
+
+  @override
+  String get editCourse => 'Modifier le cours';
+
+  @override
+  String get courseName => 'Nom';
+
+  @override
+  String get discipline => 'Discipline';
+
+  @override
+  String get room => 'Salle';
+
+  @override
+  String get teacher => 'Professeur';
+
+  @override
+  String get recurrenceDays => 'Jours';
+
+  @override
+  String get recurrenceTime => 'Heure';
+
+  @override
+  String get recurrenceEndsAt => 'Se termine le';
+
+  @override
+  String get noCourses => 'Aucun cours pour le moment';
+
+  @override
+  String get generateSessions => 'Générer les 4 prochaines semaines';
+
+  @override
+  String get sessionsGenerated => 'Séances générées';
+
+  @override
+  String get fieldRequired => 'Ce champ est obligatoire';
+
+  @override
+  String get courseSaved => 'Cours enregistré';
+
+  @override
+  String get noSessions => 'Aucune séance pour ce cours';
+
+  @override
+  String get cancelAllFuture => 'Annuler toutes les suivantes';
+
+  @override
+  String get cancelAllFutureConfirmTitle =>
+      'Annuler toutes les séances futures ?';
+
+  @override
+  String get cancelAllFutureConfirmMessage =>
+      'Toutes les séances à venir de ce cours seront annulées. Les élèves seront notifiés.';
+
+  @override
+  String get cancelAllFutureConfirmButton => 'Oui, tout annuler';
+
+  @override
+  String sessionsCancelledCount(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count séances annulées',
+      one: '1 séance annulée',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get createStudent => 'Créer un élève';
+
+  @override
+  String get createTeacher => 'Créer un professeur';
+
+  @override
+  String get createUser => 'Créer un compte';
+
+  @override
+  String get fullName => 'Nom complet';
+
+  @override
+  String get noStudents => 'Aucun élève pour le moment';
+
+  @override
+  String get noTeachers => 'Aucun professeur pour le moment';
+
+  @override
+  String get userCreated => 'Compte créé';
+
+  @override
+  String get enrollments => 'Inscriptions';
+
+  @override
+  String get enroll => 'Inscrire';
+
+  @override
+  String get unenroll => 'Désinscrire';
+
+  @override
+  String get unenrollConfirmTitle => 'Désinscrire cet élève ?';
+
+  @override
+  String get unenrollConfirmMessage =>
+      'L\'élève n\'aura plus accès à ce cours.';
+
+  @override
+  String get unenrollConfirmButton => 'Oui, désinscrire';
+
+  @override
+  String get assignedCourses => 'Cours assignés';
+
+  @override
+  String get assignCourse => 'Assigner un cours';
+
+  @override
+  String get sendAnnouncement => 'Envoyer une annonce';
+
+  @override
+  String get announcementTitle => 'Titre';
+
+  @override
+  String get announcementBody => 'Message';
+
+  @override
+  String get targetAudience => 'Audience';
+
+  @override
+  String get targetAll => 'Tout le monde';
+
+  @override
+  String get targetStudents => 'Élèves uniquement';
+
+  @override
+  String get targetTeachers => 'Professeurs uniquement';
+
+  @override
+  String get announcementSent => 'Annonce envoyée';
+
+  @override
+  String get history => 'Historique';
+
+  @override
+  String get noAnnouncementsHistory => 'Aucune annonce envoyée pour le moment';
+
+  @override
+  String get settings => 'Paramètres';
+
+  @override
+  String get adminProfile => 'Profil administrateur';
+
+  @override
+  String get monday => 'Lun';
+
+  @override
+  String get tuesday => 'Mar';
+
+  @override
+  String get wednesday => 'Mer';
+
+  @override
+  String get thursday => 'Jeu';
+
+  @override
+  String get friday => 'Ven';
+
+  @override
+  String get saturday => 'Sam';
+
+  @override
+  String get sunday => 'Dim';
+
+  @override
+  String get noneSelected => 'Aucun';
 }

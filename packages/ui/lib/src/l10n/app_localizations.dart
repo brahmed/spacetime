@@ -489,6 +489,372 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Session updated'**
   String get sessionUpdated;
+
+  /// Sidebar nav: courses
+  ///
+  /// In en, this message translates to:
+  /// **'Courses'**
+  String get navCourses;
+
+  /// Sidebar nav: students
+  ///
+  /// In en, this message translates to:
+  /// **'Students'**
+  String get navStudents;
+
+  /// Sidebar nav: teachers
+  ///
+  /// In en, this message translates to:
+  /// **'Teachers'**
+  String get navTeachers;
+
+  /// Sidebar nav: announcements
+  ///
+  /// In en, this message translates to:
+  /// **'Announcements'**
+  String get navAnnouncements;
+
+  /// Sidebar nav: sessions
+  ///
+  /// In en, this message translates to:
+  /// **'Sessions'**
+  String get navSessions;
+
+  /// Sidebar nav: settings
+  ///
+  /// In en, this message translates to:
+  /// **'Settings'**
+  String get navSettings;
+
+  /// Button to open create course drawer
+  ///
+  /// In en, this message translates to:
+  /// **'Create course'**
+  String get createCourse;
+
+  /// Button / drawer title to edit a course
+  ///
+  /// In en, this message translates to:
+  /// **'Edit course'**
+  String get editCourse;
+
+  /// Field label for course name
+  ///
+  /// In en, this message translates to:
+  /// **'Name'**
+  String get courseName;
+
+  /// Field label for course discipline
+  ///
+  /// In en, this message translates to:
+  /// **'Discipline'**
+  String get discipline;
+
+  /// Field label for course room
+  ///
+  /// In en, this message translates to:
+  /// **'Room'**
+  String get room;
+
+  /// Field label for assigned teacher
+  ///
+  /// In en, this message translates to:
+  /// **'Teacher'**
+  String get teacher;
+
+  /// Field label for recurrence days
+  ///
+  /// In en, this message translates to:
+  /// **'Days'**
+  String get recurrenceDays;
+
+  /// Field label for recurrence time
+  ///
+  /// In en, this message translates to:
+  /// **'Time'**
+  String get recurrenceTime;
+
+  /// Field label for recurrence end date
+  ///
+  /// In en, this message translates to:
+  /// **'Ends on'**
+  String get recurrenceEndsAt;
+
+  /// Empty state for courses list
+  ///
+  /// In en, this message translates to:
+  /// **'No courses yet'**
+  String get noCourses;
+
+  /// Button to generate sessions for next 4 weeks
+  ///
+  /// In en, this message translates to:
+  /// **'Generate next 4 weeks'**
+  String get generateSessions;
+
+  /// Snackbar after generating sessions
+  ///
+  /// In en, this message translates to:
+  /// **'Sessions generated'**
+  String get sessionsGenerated;
+
+  /// Generic validation: field is empty
+  ///
+  /// In en, this message translates to:
+  /// **'This field is required'**
+  String get fieldRequired;
+
+  /// Snackbar after saving a course
+  ///
+  /// In en, this message translates to:
+  /// **'Course saved'**
+  String get courseSaved;
+
+  /// Empty state for sessions list
+  ///
+  /// In en, this message translates to:
+  /// **'No sessions for this course'**
+  String get noSessions;
+
+  /// Button to cancel all future sessions
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel all future'**
+  String get cancelAllFuture;
+
+  /// Dialog title for cancel all future
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel all future sessions?'**
+  String get cancelAllFutureConfirmTitle;
+
+  /// Dialog body for cancel all future
+  ///
+  /// In en, this message translates to:
+  /// **'All upcoming sessions for this course will be cancelled. Students will be notified.'**
+  String get cancelAllFutureConfirmMessage;
+
+  /// Confirm button for cancel all future dialog
+  ///
+  /// In en, this message translates to:
+  /// **'Yes, cancel all'**
+  String get cancelAllFutureConfirmButton;
+
+  /// Snackbar after cancelling future sessions
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, =1{1 session cancelled} other{{count} sessions cancelled}}'**
+  String sessionsCancelledCount(int count);
+
+  /// Button to create a student account
+  ///
+  /// In en, this message translates to:
+  /// **'Create student'**
+  String get createStudent;
+
+  /// Button to create a teacher account
+  ///
+  /// In en, this message translates to:
+  /// **'Create teacher'**
+  String get createTeacher;
+
+  /// Drawer title for creating a user
+  ///
+  /// In en, this message translates to:
+  /// **'Create account'**
+  String get createUser;
+
+  /// Field label for user full name
+  ///
+  /// In en, this message translates to:
+  /// **'Full name'**
+  String get fullName;
+
+  /// Empty state for students list
+  ///
+  /// In en, this message translates to:
+  /// **'No students yet'**
+  String get noStudents;
+
+  /// Empty state for teachers list
+  ///
+  /// In en, this message translates to:
+  /// **'No teachers yet'**
+  String get noTeachers;
+
+  /// Snackbar after creating a user
+  ///
+  /// In en, this message translates to:
+  /// **'Account created'**
+  String get userCreated;
+
+  /// Section header for student enrollments
+  ///
+  /// In en, this message translates to:
+  /// **'Enrollments'**
+  String get enrollments;
+
+  /// Button to enroll student in course
+  ///
+  /// In en, this message translates to:
+  /// **'Enroll'**
+  String get enroll;
+
+  /// Button to unenroll student from course
+  ///
+  /// In en, this message translates to:
+  /// **'Unenroll'**
+  String get unenroll;
+
+  /// Dialog title for unenroll
+  ///
+  /// In en, this message translates to:
+  /// **'Unenroll student?'**
+  String get unenrollConfirmTitle;
+
+  /// Dialog body for unenroll
+  ///
+  /// In en, this message translates to:
+  /// **'The student will lose access to this course.'**
+  String get unenrollConfirmMessage;
+
+  /// Confirm button in unenroll dialog
+  ///
+  /// In en, this message translates to:
+  /// **'Yes, unenroll'**
+  String get unenrollConfirmButton;
+
+  /// Section header for teacher assigned courses
+  ///
+  /// In en, this message translates to:
+  /// **'Assigned courses'**
+  String get assignedCourses;
+
+  /// Button to assign a course to a teacher
+  ///
+  /// In en, this message translates to:
+  /// **'Assign course'**
+  String get assignCourse;
+
+  /// Button to send an announcement
+  ///
+  /// In en, this message translates to:
+  /// **'Send announcement'**
+  String get sendAnnouncement;
+
+  /// Field label for announcement title
+  ///
+  /// In en, this message translates to:
+  /// **'Title'**
+  String get announcementTitle;
+
+  /// Field label for announcement body
+  ///
+  /// In en, this message translates to:
+  /// **'Message'**
+  String get announcementBody;
+
+  /// Field label for announcement target audience
+  ///
+  /// In en, this message translates to:
+  /// **'Audience'**
+  String get targetAudience;
+
+  /// Audience option: all users
+  ///
+  /// In en, this message translates to:
+  /// **'Everyone'**
+  String get targetAll;
+
+  /// Audience option: students
+  ///
+  /// In en, this message translates to:
+  /// **'Students only'**
+  String get targetStudents;
+
+  /// Audience option: teachers
+  ///
+  /// In en, this message translates to:
+  /// **'Teachers only'**
+  String get targetTeachers;
+
+  /// Snackbar after sending announcement
+  ///
+  /// In en, this message translates to:
+  /// **'Announcement sent'**
+  String get announcementSent;
+
+  /// Section header for announcement history
+  ///
+  /// In en, this message translates to:
+  /// **'History'**
+  String get history;
+
+  /// Empty state for announcement history
+  ///
+  /// In en, this message translates to:
+  /// **'No announcements sent yet'**
+  String get noAnnouncementsHistory;
+
+  /// Settings screen title
+  ///
+  /// In en, this message translates to:
+  /// **'Settings'**
+  String get settings;
+
+  /// Settings section header
+  ///
+  /// In en, this message translates to:
+  /// **'Admin profile'**
+  String get adminProfile;
+
+  /// Monday abbreviation
+  ///
+  /// In en, this message translates to:
+  /// **'Mon'**
+  String get monday;
+
+  /// Tuesday abbreviation
+  ///
+  /// In en, this message translates to:
+  /// **'Tue'**
+  String get tuesday;
+
+  /// Wednesday abbreviation
+  ///
+  /// In en, this message translates to:
+  /// **'Wed'**
+  String get wednesday;
+
+  /// Thursday abbreviation
+  ///
+  /// In en, this message translates to:
+  /// **'Thu'**
+  String get thursday;
+
+  /// Friday abbreviation
+  ///
+  /// In en, this message translates to:
+  /// **'Fri'**
+  String get friday;
+
+  /// Saturday abbreviation
+  ///
+  /// In en, this message translates to:
+  /// **'Sat'**
+  String get saturday;
+
+  /// Sunday abbreviation
+  ///
+  /// In en, this message translates to:
+  /// **'Sun'**
+  String get sunday;
+
+  /// Placeholder when no teacher or value is selected
+  ///
+  /// In en, this message translates to:
+  /// **'None'**
+  String get noneSelected;
 }
 
 class _AppLocalizationsDelegate
