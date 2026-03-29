@@ -5,6 +5,7 @@ import 'package:supabase_client/supabase.dart';
 import 'package:supabase_flutter/supabase_flutter.dart' hide Session;
 import 'package:ui/ui.dart';
 
+import '../../../common/widgets/show_alert_dialog.dart';
 import '../bloc/teachers_bloc.dart';
 
 class TeachersScreen extends StatelessWidget {
@@ -45,6 +46,14 @@ class _TeachersView extends StatelessWidget {
             SnackBar(content: Text(l10n.courseSaved)),
           );
         } else if (state is TeacherAssignFailure) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(content: Text(l10n.somethingWentWrong)),
+          );
+        } else if (state is TeacherUnassignSuccess) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(content: Text(l10n.courseSaved)),
+          );
+        } else if (state is TeacherUnassignFailure) {
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(content: Text(l10n.somethingWentWrong)),
           );
@@ -136,6 +145,7 @@ class _TeachersList extends StatelessWidget {
         final unassignedCourses =
             courses.where((c) => c.teacherId != teacher.id).toList();
         return _TeacherRow(
+          key: ValueKey('${teacher.id}-${assignedCourses.length}'),
           teacher: teacher,
           assignedCourses: assignedCourses,
           unassignedCourses: unassignedCourses,
@@ -147,6 +157,7 @@ class _TeachersList extends StatelessWidget {
 
 class _TeacherRow extends StatelessWidget {
   const _TeacherRow({
+    super.key,
     required this.teacher,
     required this.assignedCourses,
     required this.unassignedCourses,
@@ -227,6 +238,13 @@ class _TeacherRow extends StatelessWidget {
                         ),
                         const SizedBox(width: Sizes.p8),
                         Expanded(child: Text(course.name)),
+                        TextButton(
+                          style: TextButton.styleFrom(
+                            foregroundColor: colors.danger,
+                          ),
+                          onPressed: () => _confirmUnassign(context, course),
+                          child: Text(l10n.unassignCourse),
+                        ),
                       ],
                     ),
                   ),
@@ -264,6 +282,23 @@ class _TeacherRow extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  Future<void> _confirmUnassign(BuildContext context, Course course) async {
+    final l10n = context.l10n;
+    final confirmed = await showAlertDialog(
+      context: context,
+      title: l10n.unassignConfirmTitle,
+      content: l10n.unassignConfirmMessage,
+      cancelActionText: l10n.cancel,
+      defaultActionText: l10n.unassignConfirmButton,
+      isDestructive: true,
+    );
+    if (confirmed == true && context.mounted) {
+      context.read<TeachersBloc>().add(
+            TeacherCourseUnassigned(courseId: course.id),
+          );
+    }
   }
 }
 

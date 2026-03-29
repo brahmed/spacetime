@@ -195,6 +195,21 @@ class AppLocalizationsAr extends AppLocalizations {
   }
 
   @override
+  String enrolledCoursesCount(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count دورة',
+      many: '$count دورةً',
+      few: '$count دورات',
+      two: 'دورتان',
+      one: 'دورة واحدة',
+      zero: 'لا دورات',
+    );
+    return '$_temp0';
+  }
+
+  @override
   String get cancelSession => 'إلغاء الحصة';
 
   @override
@@ -357,6 +372,18 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get assignCourse => 'إسناد دورة';
+
+  @override
+  String get unassignCourse => 'إلغاء الإسناد';
+
+  @override
+  String get unassignConfirmTitle => 'إلغاء إسناد الدورة؟';
+
+  @override
+  String get unassignConfirmMessage => 'لن يكون للدورة مدرّس مسند بعد الآن.';
+
+  @override
+  String get unassignConfirmButton => 'نعم، إلغاء الإسناد';
 
   @override
   String get sendAnnouncement => 'إرسال إعلان';

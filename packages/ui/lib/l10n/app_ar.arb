@@ -60,6 +60,13 @@
   "noTeacherSessions": "لا توجد حصص قادمة",
   "attendanceList": "الحضور",
   "attendees": "{count, plural, =0{لا طلاب} =1{طالب واحد} two{طالبان} few{{count} طلاب} many{{count} طالباً} other{{count} طالب}}",
+  "enrolledCoursesCount": "{count, plural, =0{لا دورات} =1{دورة واحدة} two{دورتان} few{{count} دورات} many{{count} دورةً} other{{count} دورة}}",
+  "@enrolledCoursesCount": {
+    "description": "Number of courses a student is enrolled in",
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
   "cancelSession": "إلغاء الحصة",
   "cancelSessionConfirmTitle": "إلغاء هذه الحصة؟",
   "cancelSessionConfirmMessage": "سيتم إشعار الطلاب. لا يمكن التراجع عن هذا الإجراء.",
@@ -116,6 +123,10 @@
 
   "assignedCourses": "الدورات المسندة",
   "assignCourse": "إسناد دورة",
+  "unassignCourse": "إلغاء الإسناد",
+  "unassignConfirmTitle": "إلغاء إسناد الدورة؟",
+  "unassignConfirmMessage": "لن يكون للدورة مدرّس مسند بعد الآن.",
+  "unassignConfirmButton": "نعم، إلغاء الإسناد",
 
   "sendAnnouncement": "إرسال إعلان",
   "announcementTitle": "العنوان",

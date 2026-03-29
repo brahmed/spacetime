@@ -160,58 +160,63 @@ class _CourseRow extends StatelessWidget {
     return Card(
       child: Padding(
         padding: const EdgeInsets.all(Sizes.p16),
-        child: Row(
-          spacing: Sizes.p16,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                spacing: Sizes.p4,
-                children: [
-                  Text(
-                    course.name,
-                    style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                          fontWeight: FontWeight.w600,
-                        ),
+            Text(
+              course.name,
+              style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                    fontWeight: FontWeight.w600,
                   ),
-                  if (course.discipline != null)
-                    Text(
-                      course.discipline!,
-                      style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                            color: colors.textMuted,
-                          ),
-                    ),
-                  Row(
-                    spacing: Sizes.p16,
-                    children: [
-                      if (course.room != null)
-                        _Chip(
-                          icon: Icons.room_outlined,
-                          label: course.room!,
-                        ),
-                      if (teacher != null)
-                        _Chip(
-                          icon: Icons.person_outline,
-                          label: teacher!.fullName,
-                        ),
-                      _Chip(
-                        icon: Icons.schedule_outlined,
-                        label: course.recurrenceTime,
-                      ),
-                    ],
-                  ),
-                ],
-              ),
             ),
+            if (course.discipline != null) ...[
+              const SizedBox(height: Sizes.p4),
+              Text(
+                course.discipline!,
+                style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                      color: colors.textMuted,
+                    ),
+              ),
+            ],
+            const SizedBox(height: Sizes.p8),
             Row(
-              spacing: Sizes.p8,
+              children: [
+                if (course.room != null) ...[
+                  _Chip(
+                    icon: Icons.room_outlined,
+                    label: course.room!,
+                  ),
+                  const SizedBox(width: Sizes.p16),
+                ],
+                if (teacher != null) ...[
+                  _Chip(
+                    icon: Icons.person_outline,
+                    label: teacher!.fullName,
+                  ),
+                  const SizedBox(width: Sizes.p16),
+                ],
+                _Chip(
+                  icon: Icons.schedule_outlined,
+                  label: course.recurrenceTime,
+                ),
+              ],
+            ),
+            const SizedBox(height: Sizes.p8),
+            Row(
               children: [
                 OutlinedButton.icon(
+                  style: OutlinedButton.styleFrom(
+                    minimumSize: const Size(0, 36),
+                  ),
                   onPressed: () => context.go('/sessions/${course.id}'),
                   icon: const Icon(Icons.calendar_month_outlined, size: 16),
                   label: Text(l10n.navSessions),
                 ),
+                const SizedBox(width: Sizes.p8),
                 OutlinedButton.icon(
+                  style: OutlinedButton.styleFrom(
+                    minimumSize: const Size(0, 36),
+                  ),
                   onPressed: () {
                     context
                         .read<CoursesBloc>()
@@ -220,6 +225,7 @@ class _CourseRow extends StatelessWidget {
                   icon: const Icon(Icons.auto_awesome_outlined, size: 16),
                   label: Text(l10n.generateSessions),
                 ),
+                const Spacer(),
                 IconButton(
                   icon: const Icon(Icons.edit_outlined),
                   tooltip: l10n.editCourse,

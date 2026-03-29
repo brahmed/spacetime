@@ -192,6 +192,18 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
+  String enrolledCoursesCount(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count courses',
+      one: '1 course',
+      zero: 'No courses',
+    );
+    return '$_temp0';
+  }
+
+  @override
   String get cancelSession => 'Cancel session';
 
   @override
@@ -351,6 +363,19 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get assignCourse => 'Assign course';
+
+  @override
+  String get unassignCourse => 'Unassign';
+
+  @override
+  String get unassignConfirmTitle => 'Unassign course?';
+
+  @override
+  String get unassignConfirmMessage =>
+      'The course will no longer have an assigned teacher.';
+
+  @override
+  String get unassignConfirmButton => 'Yes, unassign';
 
   @override
   String get sendAnnouncement => 'Send announcement';

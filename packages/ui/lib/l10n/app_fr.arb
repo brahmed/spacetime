@@ -60,6 +60,13 @@
   "noTeacherSessions": "Aucune séance à venir",
   "attendanceList": "Présences",
   "attendees": "{count, plural, =0{Aucun élève} =1{1 élève} other{{count} élèves}}",
+  "enrolledCoursesCount": "{count, plural, =0{Aucun cours} =1{1 cours} other{{count} cours}}",
+  "@enrolledCoursesCount": {
+    "description": "Number of courses a student is enrolled in",
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
   "cancelSession": "Annuler la séance",
   "cancelSessionConfirmTitle": "Annuler cette séance ?",
   "cancelSessionConfirmMessage": "Les élèves seront notifiés. Cette action est irréversible.",
@@ -116,6 +123,10 @@
 
   "assignedCourses": "Cours assignés",
   "assignCourse": "Assigner un cours",
+  "unassignCourse": "Désassigner",
+  "unassignConfirmTitle": "Désassigner le cours ?",
+  "unassignConfirmMessage": "Le cours n'aura plus d'enseignant assigné.",
+  "unassignConfirmButton": "Oui, désassigner",
 
   "sendAnnouncement": "Envoyer une annonce",
   "announcementTitle": "Titre",

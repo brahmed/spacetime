@@ -85,6 +85,26 @@ class CourseRepository {
     }
   }
 
+  Future<Course> unassignTeacher(String courseId) async {
+    try {
+      final data = await _supabase
+          .from('courses')
+          .update({'teacher_id': null})
+          .eq('id', courseId)
+          .select()
+          .single();
+      return Course.fromJson(data);
+    } on PostgrestException catch (e, st) {
+      log(
+        'Failed to unassign teacher from course $courseId',
+        name: 'courses',
+        error: e,
+        stackTrace: st,
+      );
+      throw NetworkException(e.message);
+    }
+  }
+
   Future<Course> updateCourse({
     required String courseId,
     String? name,

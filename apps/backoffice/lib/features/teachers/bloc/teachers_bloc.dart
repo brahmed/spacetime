@@ -21,6 +21,7 @@ class TeachersBloc extends Bloc<TeachersEvent, TeachersState> {
     on<TeachersLoaded>(_onLoaded);
     on<TeacherAccountCreated>(_onAccountCreated);
     on<TeacherCourseAssigned>(_onCourseAssigned);
+    on<TeacherCourseUnassigned>(_onCourseUnassigned);
   }
 
   final ProfileRepository _profileRepository;
@@ -71,6 +72,33 @@ class TeachersBloc extends Bloc<TeachersEvent, TeachersState> {
         stackTrace: st,
       );
       emit(TeacherCreateFailure(
+        teachers: current.teachers,
+        courses: current.courses,
+      ));
+    }
+  }
+
+  Future<void> _onCourseUnassigned(
+    TeacherCourseUnassigned event,
+    Emitter<TeachersState> emit,
+  ) async {
+    final current = state;
+    if (current is! TeachersSuccess) return;
+    emit(TeachersSaving(teachers: current.teachers, courses: current.courses));
+    try {
+      final updated = await _courseRepository.unassignTeacher(event.courseId);
+      final courses = current.courses
+          .map((c) => c.id == updated.id ? updated : c)
+          .toList();
+      emit(TeacherUnassignSuccess(teachers: current.teachers, courses: courses));
+    } catch (e, st) {
+      log(
+        'Failed to unassign teacher from course ${event.courseId}',
+        name: 'teachers',
+        error: e,
+        stackTrace: st,
+      );
+      emit(TeacherUnassignFailure(
         teachers: current.teachers,
         courses: current.courses,
       ));

@@ -38,3 +38,12 @@ final class TeacherCourseAssigned extends TeachersEvent {
   @override
   List<Object?> get props => [teacherId, courseId];
 }
+
+final class TeacherCourseUnassigned extends TeachersEvent {
+  const TeacherCourseUnassigned({required this.courseId});
+
+  final String courseId;
+
+  @override
+  List<Object?> get props => [courseId];
+}
