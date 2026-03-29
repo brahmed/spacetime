@@ -20,11 +20,9 @@ jobs:
           cache: true
 
       - name: Write apps/mobile/.env.json
-        if: ${{ secrets.MOBILE_ENV_JSON != '' }}
         run: echo '${{ secrets.MOBILE_ENV_JSON }}' > apps/mobile/.env.json
 
       - name: Write apps/backoffice/.env.json
-        if: ${{ secrets.BACKOFFICE_ENV_JSON != '' }}
         run: echo '${{ secrets.BACKOFFICE_ENV_JSON }}' > apps/backoffice/.env.json
 
       - name: Install packages/core dependencies
