@@ -1,6 +1,10 @@
 /// SpaceTime shared design system — theme, constants, and widgets.
 library;
 
+// Localisation
+export 'src/l10n/app_localizations.dart';
+export 'src/l10n/l10n_extension.dart';
+
 // Theme
 export 'src/theme/app_colors.dart';
 export 'src/theme/app_theme.dart';

@@ -1,0 +1,26 @@
+{
+  "@@locale": "ar",
+
+  "appName": "سبيس تايم",
+  "appNameBackoffice": "سبيس تايم — لوحة الإدارة",
+  "backOfficeLabel": "لوحة الإدارة",
+  "signIn": "تسجيل الدخول",
+  "signInToYourAccount": "سجّل دخولك إلى حسابك",
+  "signOut": "تسجيل الخروج",
+  "email": "البريد الإلكتروني",
+  "password": "كلمة المرور",
+  "emailRequired": "أدخل بريدك الإلكتروني",
+  "emailInvalid": "أدخل بريداً إلكترونياً صحيحاً",
+  "passwordRequired": "أدخل كلمة المرور",
+  "welcomeBack": "مرحباً بعودتك،",
+  "yourSchedule": "جدولك الدراسي",
+  "todaysSessions": "حصص اليوم",
+  "dashboard": "لوحة التحكم",
+  "welcomeBackNamed": "مرحباً بعودتك، {name}",
+  "students": "الطلاب",
+  "teachers": "الأساتذة",
+  "courses": "الدورات",
+  "todaysSessionsCount": "حصص اليوم",
+  "somethingWentWrong": "حدث خطأ ما. يرجى المحاولة مجدداً.",
+  "accessDenied": "الوصول مرفوض. حسابات المشرفين فقط."
+}

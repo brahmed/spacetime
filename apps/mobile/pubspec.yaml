@@ -18,6 +18,11 @@ dependencies:
   supabase_client:
     path: ../../packages/supabase
 
+  # Localisation
+  flutter_localizations:
+    sdk: flutter
+  intl: any
+
   # Supabase (direct dep for auth session access in router)
   supabase_flutter: ^2.7.0
 

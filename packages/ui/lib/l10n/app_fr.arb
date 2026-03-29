@@ -1,0 +1,26 @@
+{
+  "@@locale": "fr",
+
+  "appName": "SpaceTime",
+  "appNameBackoffice": "SpaceTime — Back Office",
+  "backOfficeLabel": "Back Office",
+  "signIn": "Se connecter",
+  "signInToYourAccount": "Connectez-vous à votre compte",
+  "signOut": "Se déconnecter",
+  "email": "E-mail",
+  "password": "Mot de passe",
+  "emailRequired": "Entrez votre e-mail",
+  "emailInvalid": "Entrez un e-mail valide",
+  "passwordRequired": "Entrez votre mot de passe",
+  "welcomeBack": "Bienvenue,",
+  "yourSchedule": "Votre planning",
+  "todaysSessions": "Séances d'aujourd'hui",
+  "dashboard": "Tableau de bord",
+  "welcomeBackNamed": "Bienvenue, {name}",
+  "students": "Élèves",
+  "teachers": "Professeurs",
+  "courses": "Cours",
+  "todaysSessionsCount": "Séances du jour",
+  "somethingWentWrong": "Une erreur est survenue. Veuillez réessayer.",
+  "accessDenied": "Accès refusé. Comptes administrateurs uniquement."
+}

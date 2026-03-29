@@ -9,13 +9,15 @@ class TeacherHomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = context.l10n;
+
     return Scaffold(
       appBar: AppBar(
-        title: const Text('SpaceTime'),
+        title: Text(l10n.appName),
         actions: [
           IconButton(
             icon: const Icon(Icons.logout_outlined),
-            tooltip: 'Sign out',
+            tooltip: l10n.signOut,
             onPressed: () =>
                 context.read<AuthBloc>().add(const AuthLogoutRequested()),
           ),
@@ -32,7 +34,7 @@ class TeacherHomeScreen extends StatelessWidget {
               spacing: Sizes.p4,
               children: [
                 Text(
-                  'Welcome back,',
+                  l10n.welcomeBack,
                   style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                         color: Theme.of(context).appColors.textMuted,
                       ),
@@ -44,7 +46,6 @@ class TeacherHomeScreen extends StatelessWidget {
                       ),
                 ),
                 const SizedBox(height: Sizes.p32),
-                // Placeholder content — replaced in Phase 5
                 Card(
                   child: Padding(
                     padding: const EdgeInsets.all(Sizes.p24),
@@ -56,7 +57,7 @@ class TeacherHomeScreen extends StatelessWidget {
                           color: Theme.of(context).appColors.accent,
                         ),
                         Text(
-                          "Today's sessions",
+                          l10n.todaysSessions,
                           style: Theme.of(context).textTheme.titleMedium,
                         ),
                       ],

@@ -1,0 +1,74 @@
+{
+  "@@locale": "en",
+
+  "appName": "SpaceTime",
+  "@appName": { "description": "Application name" },
+
+  "appNameBackoffice": "SpaceTime — Back Office",
+  "@appNameBackoffice": { "description": "Back office application name" },
+
+  "backOfficeLabel": "Back Office",
+  "@backOfficeLabel": { "description": "Subtitle shown under logo on backoffice login" },
+
+  "signIn": "Sign in",
+  "@signIn": { "description": "Login button label" },
+
+  "signInToYourAccount": "Sign in to your account",
+  "@signInToYourAccount": { "description": "Login screen subtitle" },
+
+  "signOut": "Sign out",
+  "@signOut": { "description": "Logout button tooltip and label" },
+
+  "email": "Email",
+  "@email": { "description": "Email field label" },
+
+  "password": "Password",
+  "@password": { "description": "Password field label" },
+
+  "emailRequired": "Enter your email",
+  "@emailRequired": { "description": "Validation: email empty" },
+
+  "emailInvalid": "Enter a valid email",
+  "@emailInvalid": { "description": "Validation: email format invalid" },
+
+  "passwordRequired": "Enter your password",
+  "@passwordRequired": { "description": "Validation: password empty" },
+
+  "welcomeBack": "Welcome back,",
+  "@welcomeBack": { "description": "Greeting shown on home screens above the user name" },
+
+  "yourSchedule": "Your schedule",
+  "@yourSchedule": { "description": "Placeholder card label on student home screen" },
+
+  "todaysSessions": "Today's sessions",
+  "@todaysSessions": { "description": "Placeholder card label on teacher home screen" },
+
+  "dashboard": "Dashboard",
+  "@dashboard": { "description": "Dashboard screen title" },
+
+  "welcomeBackNamed": "Welcome back, {name}",
+  "@welcomeBackNamed": {
+    "description": "Dashboard greeting with user name",
+    "placeholders": {
+      "name": { "type": "String" }
+    }
+  },
+
+  "students": "Students",
+  "@students": { "description": "Stats card label" },
+
+  "teachers": "Teachers",
+  "@teachers": { "description": "Stats card label" },
+
+  "courses": "Courses",
+  "@courses": { "description": "Stats card label" },
+
+  "todaysSessionsCount": "Today's Sessions",
+  "@todaysSessionsCount": { "description": "Stats card label" },
+
+  "somethingWentWrong": "Something went wrong. Please try again.",
+  "@somethingWentWrong": { "description": "Generic error message" },
+
+  "accessDenied": "Access denied. Admin accounts only.",
+  "@accessDenied": { "description": "Error shown when non-admin tries to log into backoffice" }
+}

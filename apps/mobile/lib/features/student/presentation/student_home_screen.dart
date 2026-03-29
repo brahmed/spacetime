@@ -9,13 +9,15 @@ class StudentHomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = context.l10n;
+
     return Scaffold(
       appBar: AppBar(
-        title: const Text('SpaceTime'),
+        title: Text(l10n.appName),
         actions: [
           IconButton(
             icon: const Icon(Icons.logout_outlined),
-            tooltip: 'Sign out',
+            tooltip: l10n.signOut,
             onPressed: () =>
                 context.read<AuthBloc>().add(const AuthLogoutRequested()),
           ),
@@ -32,7 +34,7 @@ class StudentHomeScreen extends StatelessWidget {
               spacing: Sizes.p4,
               children: [
                 Text(
-                  'Welcome back,',
+                  l10n.welcomeBack,
                   style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                         color: Theme.of(context).appColors.textMuted,
                       ),
@@ -44,7 +46,6 @@ class StudentHomeScreen extends StatelessWidget {
                       ),
                 ),
                 const SizedBox(height: Sizes.p32),
-                // Placeholder content — replaced in Phase 4
                 Card(
                   child: Padding(
                     padding: const EdgeInsets.all(Sizes.p24),
@@ -56,7 +57,7 @@ class StudentHomeScreen extends StatelessWidget {
                           color: Theme.of(context).appColors.accent,
                         ),
                         Text(
-                          'Your schedule',
+                          l10n.yourSchedule,
                           style: Theme.of(context).textTheme.titleMedium,
                         ),
                       ],

@@ -9,9 +9,11 @@ class DashboardScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = context.l10n;
+
     return Scaffold(
       appBar: AppBar(
-        title: const Text('SpaceTime — Back Office'),
+        title: Text(l10n.appNameBackoffice),
         actions: [
           BlocBuilder<AuthBloc, AuthState>(
             builder: (context, state) {
@@ -31,7 +33,7 @@ class DashboardScreen extends StatelessWidget {
                     ),
                     IconButton(
                       icon: const Icon(Icons.logout_outlined),
-                      tooltip: 'Sign out',
+                      tooltip: l10n.signOut,
                       onPressed: () => context
                           .read<AuthBloc>()
                           .add(const AuthLogoutRequested()),
@@ -54,29 +56,26 @@ class DashboardScreen extends StatelessWidget {
               spacing: Sizes.p8,
               children: [
                 Text(
-                  'Dashboard',
+                  l10n.dashboard,
                   style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                         fontWeight: FontWeight.w700,
                       ),
                 ),
                 Text(
-                  'Welcome back, ${state.profile.fullName}',
+                  l10n.welcomeBackNamed(state.profile.fullName),
                   style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                         color: Theme.of(context).appColors.textMuted,
                       ),
                 ),
                 const SizedBox(height: Sizes.p32),
-                // Placeholder stats grid — replaced in Phase 6
                 Wrap(
                   spacing: Sizes.p16,
                   runSpacing: Sizes.p16,
-                  children: const [
-                    _StatCard(label: 'Students', icon: Icons.people_outline),
-                    _StatCard(label: 'Teachers', icon: Icons.school_outlined),
-                    _StatCard(label: 'Courses', icon: Icons.menu_book_outlined),
-                    _StatCard(
-                        label: "Today's Sessions",
-                        icon: Icons.today_outlined),
+                  children: [
+                    _StatCard(label: l10n.students, icon: Icons.people_outline),
+                    _StatCard(label: l10n.teachers, icon: Icons.school_outlined),
+                    _StatCard(label: l10n.courses, icon: Icons.menu_book_outlined),
+                    _StatCard(label: l10n.todaysSessionsCount, icon: Icons.today_outlined),
                   ],
                 ),
               ],

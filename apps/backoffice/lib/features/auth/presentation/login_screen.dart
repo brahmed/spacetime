@@ -36,6 +36,8 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = context.l10n;
+
     return Scaffold(
       body: BlocListener<AuthBloc, AuthState>(
         listener: (context, state) {
@@ -60,7 +62,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     Text(
-                      'SpaceTime',
+                      l10n.appName,
                       style: Theme.of(context).textTheme.displaySmall?.copyWith(
                             fontWeight: FontWeight.w700,
                             color: Theme.of(context).appColors.accent,
@@ -69,7 +71,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     gapH8,
                     Text(
-                      'Back Office',
+                      l10n.backOfficeLabel,
                       style: Theme.of(context).textTheme.titleMedium?.copyWith(
                             color: Theme.of(context).appColors.textMuted,
                             letterSpacing: 2,
@@ -82,10 +84,10 @@ class _LoginScreenState extends State<LoginScreen> {
                       keyboardType: TextInputType.emailAddress,
                       textInputAction: TextInputAction.next,
                       autocorrect: false,
-                      decoration: const InputDecoration(labelText: 'Email'),
+                      decoration: InputDecoration(labelText: l10n.email),
                       validator: (v) {
-                        if (v == null || v.trim().isEmpty) return 'Enter your email';
-                        if (!v.contains('@')) return 'Enter a valid email';
+                        if (v == null || v.trim().isEmpty) return l10n.emailRequired;
+                        if (!v.contains('@')) return l10n.emailInvalid;
                         return null;
                       },
                     ),
@@ -96,7 +98,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       textInputAction: TextInputAction.done,
                       onFieldSubmitted: (_) => _submit(),
                       decoration: InputDecoration(
-                        labelText: 'Password',
+                        labelText: l10n.password,
                         suffixIcon: IconButton(
                           icon: Icon(
                             _obscurePassword
@@ -108,7 +110,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                       ),
                       validator: (v) {
-                        if (v == null || v.isEmpty) return 'Enter your password';
+                        if (v == null || v.isEmpty) return l10n.passwordRequired;
                         return null;
                       },
                     ),
@@ -116,7 +118,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     BlocBuilder<AuthBloc, AuthState>(
                       builder: (context, state) {
                         return PrimaryButton(
-                          label: 'Sign in',
+                          label: l10n.signIn,
                           isLoading: state is AuthLoading,
                           onPressed: _submit,
                         );
