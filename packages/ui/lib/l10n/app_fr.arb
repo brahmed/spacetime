@@ -52,5 +52,21 @@
   "language": "Langue",
   "languageEnglish": "Anglais",
   "languageFrench": "Français",
-  "languageArabic": "Arabe"
+  "languageArabic": "Arabe",
+
+  "cancel": "Annuler",
+
+  "teacherSchedule": "Mes séances",
+  "noTeacherSessions": "Aucune séance à venir",
+  "attendanceList": "Présences",
+  "attendees": "{count, plural, =0{Aucun élève} =1{1 élève} other{{count} élèves}}",
+  "cancelSession": "Annuler la séance",
+  "cancelSessionConfirmTitle": "Annuler cette séance ?",
+  "cancelSessionConfirmMessage": "Les élèves seront notifiés. Cette action est irréversible.",
+  "cancelSessionConfirmButton": "Oui, annuler",
+  "sessionCancelledSuccess": "Séance annulée",
+  "editSession": "Modifier la séance",
+  "editRoom": "Salle",
+  "saveChanges": "Enregistrer",
+  "sessionUpdated": "Séance mise à jour"
 }

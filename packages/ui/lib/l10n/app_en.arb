@@ -168,5 +168,52 @@
   "@languageFrench": { "description": "French language option" },
 
   "languageArabic": "Arabic",
-  "@languageArabic": { "description": "Arabic language option" }
+  "@languageArabic": { "description": "Arabic language option" },
+
+  "cancel": "Cancel",
+  "@cancel": { "description": "Generic cancel button label" },
+
+  "teacherSchedule": "My sessions",
+  "@teacherSchedule": { "description": "Teacher schedule screen title" },
+
+  "noTeacherSessions": "No upcoming sessions",
+  "@noTeacherSessions": { "description": "Empty state on teacher schedule" },
+
+  "attendanceList": "Attendance",
+  "@attendanceList": { "description": "Section header for attendance list in teacher session detail" },
+
+  "attendees": "{count, plural, =0{No students} =1{1 student} other{{count} students}}",
+  "@attendees": {
+    "description": "Number of students enrolled in a session",
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+
+  "cancelSession": "Cancel session",
+  "@cancelSession": { "description": "Button to cancel a session" },
+
+  "cancelSessionConfirmTitle": "Cancel this session?",
+  "@cancelSessionConfirmTitle": { "description": "Dialog title when confirming session cancellation" },
+
+  "cancelSessionConfirmMessage": "Students will be notified. This cannot be undone.",
+  "@cancelSessionConfirmMessage": { "description": "Dialog body when confirming session cancellation" },
+
+  "cancelSessionConfirmButton": "Yes, cancel",
+  "@cancelSessionConfirmButton": { "description": "Confirm button in cancel session dialog" },
+
+  "sessionCancelledSuccess": "Session cancelled",
+  "@sessionCancelledSuccess": { "description": "Snackbar after teacher cancels a session" },
+
+  "editSession": "Edit session",
+  "@editSession": { "description": "Button / bottom sheet title for editing a session" },
+
+  "editRoom": "Room",
+  "@editRoom": { "description": "Field label for room in edit session sheet" },
+
+  "saveChanges": "Save changes",
+  "@saveChanges": { "description": "Save button in edit session sheet" },
+
+  "sessionUpdated": "Session updated",
+  "@sessionUpdated": { "description": "Snackbar after teacher edits a session" }
 }

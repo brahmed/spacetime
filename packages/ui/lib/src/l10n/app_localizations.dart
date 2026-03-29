@@ -405,6 +405,90 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Arabic'**
   String get languageArabic;
+
+  /// Generic cancel button label
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get cancel;
+
+  /// Teacher schedule screen title
+  ///
+  /// In en, this message translates to:
+  /// **'My sessions'**
+  String get teacherSchedule;
+
+  /// Empty state on teacher schedule
+  ///
+  /// In en, this message translates to:
+  /// **'No upcoming sessions'**
+  String get noTeacherSessions;
+
+  /// Section header for attendance list in teacher session detail
+  ///
+  /// In en, this message translates to:
+  /// **'Attendance'**
+  String get attendanceList;
+
+  /// Number of students enrolled in a session
+  ///
+  /// In en, this message translates to:
+  /// **'{count, plural, =0{No students} =1{1 student} other{{count} students}}'**
+  String attendees(int count);
+
+  /// Button to cancel a session
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel session'**
+  String get cancelSession;
+
+  /// Dialog title when confirming session cancellation
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel this session?'**
+  String get cancelSessionConfirmTitle;
+
+  /// Dialog body when confirming session cancellation
+  ///
+  /// In en, this message translates to:
+  /// **'Students will be notified. This cannot be undone.'**
+  String get cancelSessionConfirmMessage;
+
+  /// Confirm button in cancel session dialog
+  ///
+  /// In en, this message translates to:
+  /// **'Yes, cancel'**
+  String get cancelSessionConfirmButton;
+
+  /// Snackbar after teacher cancels a session
+  ///
+  /// In en, this message translates to:
+  /// **'Session cancelled'**
+  String get sessionCancelledSuccess;
+
+  /// Button / bottom sheet title for editing a session
+  ///
+  /// In en, this message translates to:
+  /// **'Edit session'**
+  String get editSession;
+
+  /// Field label for room in edit session sheet
+  ///
+  /// In en, this message translates to:
+  /// **'Room'**
+  String get editRoom;
+
+  /// Save button in edit session sheet
+  ///
+  /// In en, this message translates to:
+  /// **'Save changes'**
+  String get saveChanges;
+
+  /// Snackbar after teacher edits a session
+  ///
+  /// In en, this message translates to:
+  /// **'Session updated'**
+  String get sessionUpdated;
 }
 
 class _AppLocalizationsDelegate

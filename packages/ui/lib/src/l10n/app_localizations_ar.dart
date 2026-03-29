@@ -166,4 +166,59 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get languageArabic => 'العربية';
+
+  @override
+  String get cancel => 'إلغاء';
+
+  @override
+  String get teacherSchedule => 'حصصي';
+
+  @override
+  String get noTeacherSessions => 'لا توجد حصص قادمة';
+
+  @override
+  String get attendanceList => 'الحضور';
+
+  @override
+  String attendees(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count طالب',
+      many: '$count طالباً',
+      few: '$count طلاب',
+      two: 'طالبان',
+      one: 'طالب واحد',
+      zero: 'لا طلاب',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get cancelSession => 'إلغاء الحصة';
+
+  @override
+  String get cancelSessionConfirmTitle => 'إلغاء هذه الحصة؟';
+
+  @override
+  String get cancelSessionConfirmMessage =>
+      'سيتم إشعار الطلاب. لا يمكن التراجع عن هذا الإجراء.';
+
+  @override
+  String get cancelSessionConfirmButton => 'نعم، إلغاء';
+
+  @override
+  String get sessionCancelledSuccess => 'تم إلغاء الحصة';
+
+  @override
+  String get editSession => 'تعديل الحصة';
+
+  @override
+  String get editRoom => 'القاعة';
+
+  @override
+  String get saveChanges => 'حفظ التغييرات';
+
+  @override
+  String get sessionUpdated => 'تم تحديث الحصة';
 }

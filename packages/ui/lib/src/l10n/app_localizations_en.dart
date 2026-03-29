@@ -166,4 +166,56 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get languageArabic => 'Arabic';
+
+  @override
+  String get cancel => 'Cancel';
+
+  @override
+  String get teacherSchedule => 'My sessions';
+
+  @override
+  String get noTeacherSessions => 'No upcoming sessions';
+
+  @override
+  String get attendanceList => 'Attendance';
+
+  @override
+  String attendees(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count students',
+      one: '1 student',
+      zero: 'No students',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get cancelSession => 'Cancel session';
+
+  @override
+  String get cancelSessionConfirmTitle => 'Cancel this session?';
+
+  @override
+  String get cancelSessionConfirmMessage =>
+      'Students will be notified. This cannot be undone.';
+
+  @override
+  String get cancelSessionConfirmButton => 'Yes, cancel';
+
+  @override
+  String get sessionCancelledSuccess => 'Session cancelled';
+
+  @override
+  String get editSession => 'Edit session';
+
+  @override
+  String get editRoom => 'Room';
+
+  @override
+  String get saveChanges => 'Save changes';
+
+  @override
+  String get sessionUpdated => 'Session updated';
 }

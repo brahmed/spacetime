@@ -122,7 +122,15 @@ class FcmService {
     required String userId,
     required DeviceTokenRepository repository,
   }) async {
-    final token = await FirebaseMessaging.instance.getToken();
+    final String? token;
+    try {
+      token = await FirebaseMessaging.instance.getToken();
+    } catch (e, st) {
+      // APNS token not yet available (common on iOS simulator / cold start).
+      // Skip token removal — logout still proceeds.
+      log('FCM getToken skipped during sign-out', name: 'fcm', error: e, stackTrace: st);
+      return;
+    }
     if (token == null) return;
     try {
       await repository.removeToken(userId: userId, token: token);

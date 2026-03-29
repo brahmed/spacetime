@@ -168,4 +168,56 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get languageArabic => 'Arabe';
+
+  @override
+  String get cancel => 'Annuler';
+
+  @override
+  String get teacherSchedule => 'Mes séances';
+
+  @override
+  String get noTeacherSessions => 'Aucune séance à venir';
+
+  @override
+  String get attendanceList => 'Présences';
+
+  @override
+  String attendees(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count élèves',
+      one: '1 élève',
+      zero: 'Aucun élève',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get cancelSession => 'Annuler la séance';
+
+  @override
+  String get cancelSessionConfirmTitle => 'Annuler cette séance ?';
+
+  @override
+  String get cancelSessionConfirmMessage =>
+      'Les élèves seront notifiés. Cette action est irréversible.';
+
+  @override
+  String get cancelSessionConfirmButton => 'Oui, annuler';
+
+  @override
+  String get sessionCancelledSuccess => 'Séance annulée';
+
+  @override
+  String get editSession => 'Modifier la séance';
+
+  @override
+  String get editRoom => 'Salle';
+
+  @override
+  String get saveChanges => 'Enregistrer';
+
+  @override
+  String get sessionUpdated => 'Séance mise à jour';
 }

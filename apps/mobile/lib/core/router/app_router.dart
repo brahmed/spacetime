@@ -13,6 +13,9 @@ import '../../features/student/presentation/session_detail_screen.dart';
 import '../../features/student/presentation/student_home_screen.dart';
 import '../../features/student/presentation/student_shell.dart';
 import '../../features/teacher/presentation/teacher_home_screen.dart';
+import '../../features/teacher/presentation/teacher_schedule_screen.dart';
+import '../../features/teacher/presentation/teacher_session_detail_screen.dart';
+import '../../features/teacher/presentation/teacher_shell.dart';
 
 abstract final class AppRouter {
   static GoRouter router(AuthBloc authBloc) => GoRouter(
@@ -97,10 +100,44 @@ abstract final class AppRouter {
             ],
           ),
 
-          // Teacher routes
-          GoRoute(
-            path: '/teacher/home',
-            builder: (_, _) => const TeacherHomeScreen(),
+          // Teacher tab shell
+          StatefulShellRoute.indexedStack(
+            builder: (_, _, navigationShell) =>
+                TeacherShell(navigationShell: navigationShell),
+            branches: [
+              StatefulShellBranch(
+                routes: [
+                  GoRoute(
+                    path: '/teacher/home',
+                    builder: (_, _) => const TeacherHomeScreen(),
+                  ),
+                ],
+              ),
+              StatefulShellBranch(
+                routes: [
+                  GoRoute(
+                    path: '/teacher/schedule',
+                    builder: (_, _) => const TeacherScheduleScreen(),
+                    routes: [
+                      GoRoute(
+                        path: ':sessionId',
+                        builder: (_, state) => TeacherSessionDetailScreen(
+                          sessionId: state.pathParameters['sessionId']!,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              StatefulShellBranch(
+                routes: [
+                  GoRoute(
+                    path: '/teacher/profile',
+                    builder: (_, _) => const ProfileScreen(),
+                  ),
+                ],
+              ),
+            ],
           ),
         ],
       );

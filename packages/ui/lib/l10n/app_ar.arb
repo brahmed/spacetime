@@ -52,5 +52,21 @@
   "language": "اللغة",
   "languageEnglish": "الإنجليزية",
   "languageFrench": "الفرنسية",
-  "languageArabic": "العربية"
+  "languageArabic": "العربية",
+
+  "cancel": "إلغاء",
+
+  "teacherSchedule": "حصصي",
+  "noTeacherSessions": "لا توجد حصص قادمة",
+  "attendanceList": "الحضور",
+  "attendees": "{count, plural, =0{لا طلاب} =1{طالب واحد} two{طالبان} few{{count} طلاب} many{{count} طالباً} other{{count} طالب}}",
+  "cancelSession": "إلغاء الحصة",
+  "cancelSessionConfirmTitle": "إلغاء هذه الحصة؟",
+  "cancelSessionConfirmMessage": "سيتم إشعار الطلاب. لا يمكن التراجع عن هذا الإجراء.",
+  "cancelSessionConfirmButton": "نعم، إلغاء",
+  "sessionCancelledSuccess": "تم إلغاء الحصة",
+  "editSession": "تعديل الحصة",
+  "editRoom": "القاعة",
+  "saveChanges": "حفظ التغييرات",
+  "sessionUpdated": "تم تحديث الحصة"
 }
