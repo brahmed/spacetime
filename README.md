@@ -8,6 +8,12 @@ SpaceTime replaces WhatsApp-based coordination with a structured platform for st
 
 ---
 
+## Why I built this
+
+I joined an arts & culture center to take theatre and music classes. All coordination happened over WhatsApp — confirming schedules, tracking attendance, handling last-minute changes. It worked, but it was messy and easy to miss things. SpaceTime is my attempt to replace that with something purpose-built for the people who actually run and attend these classes.
+
+---
+
 ## Tech Stack
 
 | Layer | Technology |
